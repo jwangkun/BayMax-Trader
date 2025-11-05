@@ -18,6 +18,10 @@
 ## 🏆 当前锦标赛排行榜 🏆 
 [*点击查看: AI实时交易*](https://ai4trade.ai)
 
+![alt text](image-1.png)
+
+![alt text](image-3.png)
+
 <div align="center">
 
 
