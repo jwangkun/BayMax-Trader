@@ -1,14 +1,19 @@
 <div align="center">
 
-# 🚀 AI-Trader: Can AI Beat the Market?
+# 🚀 BayMax-Trader: AI Trading Arena
+### *Enhanced version based on AI-Trader with new nof0 theme interface*
 
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://python.org)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/HKUDS/AI-Trader?style=social)](https://github.com/HKUDS/AI-Trader)
-[![Feishu](https://img.shields.io/badge/💬Feishu-Group-blue?style=flat)](./Communication.md) 
-[![WeChat](https://img.shields.io/badge/WeChat-Group-green?style=flat&logo=wechat)](./Communication.md)
+[![GitHub](https://img.shields.io/badge/GitHub-BayMax--Trader-blue?style=flat&logo=github)](https://github.com/jwangkun/BayMax-Trader)
 
-**AI agents battle for supremacy in NASDAQ 100 and SSE 50 markets. Zero human input. Pure competition.**
+**Enhanced version of AI-Trader with new nof0 modern theme interface. AI agents battle for supremacy in NASDAQ 100 and SSE 50 markets. Zero human input. Pure competition.**
+
+## 🎨 New Features
+- ✨ **nof0 Modern Theme**: Brand new web interface with elegant user experience
+- 🎯 **Real-time Trading Monitor**: Beautiful real-time data display and interactive charts
+- 📊 **Enhanced Visualization**: More intuitive performance analysis and leaderboard display
+- 🌙 **Dark/Light Theme**: Theme switching support for different usage scenarios
 
 ## 🏆 Current Championship Leaderboard 🏆 
 [*Click Here: AI Live Trading*](https://ai4trade.ai)
@@ -52,7 +57,14 @@ You just need to submit a PR that includes at least: `./agent/{your_strategy}.py
 
 ## 🌟 Project Introduction
 
-> **AI-Trader enables five distinct AI models, each employing unique investment strategies, to compete autonomously in the same market and determine which can generate the highest profits in NASDAQ 100 or SSE 50 trading!**
+> **BayMax-Trader is an enhanced version based on AI-Trader, enabling five distinct AI models, each employing unique investment strategies, to compete autonomously in the same market and determine which can generate the highest profits in NASDAQ 100 or SSE 50 trading!**
+
+### 🎯 BayMax-Trader Features
+- 🎨 **nof0 Modern Theme**: Brand new web interface with modern design language
+- 📱 **Responsive Design**: Perfect adaptation for desktop and mobile devices
+- 🌙 **Theme Switching**: Support for dark/light themes, providing personalized experience
+- 📊 **Enhanced Visualization**: More intuitive chart display and data analysis
+- 🚀 **Performance Optimization**: Faster loading speed and smoother interactive experience
 
 ### 🎯 Core Features
 
@@ -152,7 +164,7 @@ AI can only access market data from current time and before. No future informati
 ## 📁 Project Architecture
 
 ```
-AI-Trader Bench/
+BayMax-Trader/
 ├── 🤖 Core System
 │   ├── main.py                    # 🎯 Main program entry
 │   ├── agent/
@@ -196,7 +208,24 @@ AI-Trader Bench/
 │       └── agent_prompt_astock.py # 🇨🇳 A-share specific trading prompts
 │
 ├── 🎨 Frontend Interface
-│   └── frontend/                  # 🌐 Web dashboard
+│   ├── frontend/                  # 🌐 Original web dashboard
+│   └── nof0/                      # ✨ nof0 modern theme interface
+│       ├── index.html             # 🏠 Main page
+│       ├── portfolio.html         # 📊 Leaderboard page
+│       ├── models.html            # 🤖 Models page
+│       ├── config.yaml            # ⚙️ Theme configuration file
+│       └── assets/                # 🎨 Static resources
+│           ├── css/               # Style files
+│           │   ├── nof0-styles.css    # nof0 theme styles
+│           │   ├── styles.css         # Base styles
+│           │   └── models.css         # Models page styles
+│           └── js/                # JavaScript files
+│               ├── nof0-interface.js  # nof0 interface logic
+│               ├── nof0-chart.js      # Chart components
+│               ├── config-loader.js   # Configuration loader
+│               ├── data-loader.js     # Data loader
+│               ├── theme.js           # Theme switching
+│               └── ...
 │
 ├── 📋 Configuration & Documentation
 │   ├── configs/                   # ⚙️ System configuration
@@ -213,7 +242,8 @@ AI-Trader Bench/
         ├── main_a_stock_step1.sh  # A-shares: Data preparation
         ├── main_a_stock_step2.sh  # A-shares: Start MCP services
         ├── main_a_stock_step3.sh  # A-shares: Run trading agent
-        └── start_ui.sh            # Start web UI interface
+        ├── start_ui.sh            # Start original web interface
+        └── start_nof0.sh          # Start nof0 theme interface
 ```
 
 ### 🔧 Core Components Details
@@ -280,8 +310,8 @@ AI-Trader Bench/
 
 ```bash
 # 1. Clone project
-git clone https://github.com/HKUDS/AI-Trader.git
-cd AI-Trader
+git clone https://github.com/jwangkun/BayMax-Trader.git
+cd BayMax-Trader
 
 # 2. Install dependencies
 pip install -r requirements.txt
@@ -354,9 +384,13 @@ bash scripts/main_a_stock_step3.sh  # Step 3: Run A-share trading agent
 
 #### 🌐 Web UI
 ```bash
-# Start web interface
+# Start original web interface
 bash scripts/start_ui.sh
 # Visit: http://localhost:8888
+
+# Start nof0 modern theme interface
+bash scripts/start_nof0.sh
+# Visit: http://localhost:8080
 ```
 
 ---
@@ -468,11 +502,59 @@ python main.py configs/astock_config.json
 
 ### 📈 Start Web Interface
 
+#### Original Interface
 ```bash
 cd docs
 python3 -m http.server 8000
 # Visit http://localhost:8000
 ```
+
+Or use startup script:
+
+```bash
+# Start original web interface
+bash scripts/start_ui.sh
+# Visit: http://localhost:8888
+```
+
+#### nof0 Modern Theme Interface
+```bash
+# Start nof0 theme interface
+cd nof0
+python3 -m http.server 8080
+# Visit http://localhost:8080
+```
+
+Or use startup script:
+
+```bash
+# Start nof0 theme interface
+bash scripts/start_nof0.sh
+# Visit: http://localhost:8080
+```
+
+### 🎨 nof0 Theme Features
+
+The nof0 theme is BayMax-Trader's brand new modern interface, providing the following features:
+
+- **🌙 Dark/Light Theme**: Theme switching support for different usage environments
+- **📱 Responsive Design**: Perfect adaptation for desktop and mobile devices
+- **📊 Real-time Data Display**: Beautiful price ticker and real-time charts
+- **🎯 Intuitive Navigation**: Clear tab design including Live Trading, Leaderboard, Models pages
+- **⚡ Performance Optimization**: Faster loading speed and smooth animation effects
+- **🎨 Modern Design**: Latest design language and visual effects
+
+#### nof0 Interface Description
+- **Live Trading Page** (`index.html`): Main trading monitoring interface showing account value change charts
+- **Leaderboard Page** (`portfolio.html`): Display performance rankings and detailed analysis of AI models
+- **Models Page** (`models.html`): Show detailed information and configuration of each AI model
+
+#### Configuration File
+The nof0 theme uses `config.yaml` file for configuration, supporting:
+- Multi-market configuration (US stocks, A-shares)
+- Agent model configuration
+- Chart display settings
+- UI interface settings
 
 ## 📈 Performance Analysis
 
@@ -658,21 +740,27 @@ class CustomTool:
 
 ## 🚀 Roadmap
 
-### 🌟 Future Plans
+### 🌟 Completed Features
 - [x] **🇨🇳 A-Share Support** - ✅ SSE 50 Index data integration completed
-- [ ] **📊 Post-Market Statistics** - Automatic profit analysis
+- [x] **🎨 nof0 Modern Theme** - ✅ Brand new web interface completed
+
+### 🌟 Future Plans
+- [ ] **🔗 A-Share Live Trading** - Connect to real A-share trading interfaces for live trading
+- [ ] **📊 Post-Market Statistics** - Automatic profit analysis and report generation
 - [ ] **🔌 Strategy Marketplace** - Add third-party strategy sharing platform
-- [ ] **🎨 Cool Frontend Interface** - Modern web dashboard
+- [ ] **📱 Mobile App** - Develop mobile app for trading monitoring anytime, anywhere
 - [ ] **₿ Cryptocurrency** - Support digital currency trading
 - [ ] **📈 More Strategies** - Technical analysis, quantitative strategies
 - [ ] **⏰ Advanced Replay** - Support minute-level time precision and real-time replay
 - [ ] **🔍 Smart Filtering** - More precise future information detection and filtering
+- [ ] **🤖 More AI Models** - Integrate more large language models for competition
 
 
 ## 📞 Support & Community
 
-- **💬 Discussions**: [GitHub Discussions](https://github.com/HKUDS/AI-Trader/discussions)
-- **🐛 Issues**: [GitHub Issues](https://github.com/HKUDS/AI-Trader/issues)
+- **💬 Discussions**: [GitHub Discussions](https://github.com/jwangkun/BayMax-Trader/discussions)
+- **🐛 Issues**: [GitHub Issues](https://github.com/jwangkun/BayMax-Trader/issues)
+- **📧 Contact**: Welcome to contact for collaboration or technical exchange
 
 ## 📄 License
 
@@ -681,11 +769,13 @@ This project is licensed under the [MIT License](LICENSE).
 ## 🙏 Acknowledgments
 
 Thanks to the following open source projects and services:
+- [AI-Trader](https://github.com/HKUDS/AI-Trader) - Original project foundation
 - [LangChain](https://github.com/langchain-ai/langchain) - AI application development framework
 - [MCP](https://github.com/modelcontextprotocol) - Model Context Protocol
 - [Alpha Vantage](https://www.alphavantage.co/) - US stock financial data API
 - [Tushare](https://tushare.pro/) - China A-share market data API
 - [Jina AI](https://jina.ai/) - Information search service
+- [Chart.js](https://www.chartjs.org/) - Chart library
 
 ## 👥 Administrator
 
@@ -713,8 +803,8 @@ Thanks to the following open source projects and services:
 </div>
 
 <div align="center">
-  <a href="https://github.com/HKUDS/AI-Trader/graphs/contributors">
-    <img src="https://contrib.rocks/image?repo=HKUDS/AI-Trader" style="border-radius: 15px; box-shadow: 0 0 20px rgba(0, 217, 255, 0.3);" />
+  <a href="https://github.com/jwangkun/BayMax-Trader/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=jwangkun/BayMax-Trader" style="border-radius: 15px; box-shadow: 0 0 20px rgba(0, 217, 255, 0.3);" />
   </a>
 </div>
 
@@ -728,10 +818,11 @@ The materials provided by the AI-Trader project are for research purposes only a
 
 **🌟 If this project helps you, please give us a Star!**
 
-[![GitHub stars](https://img.shields.io/github/stars/HKUDS/AI-Trader?style=social)](https://github.com/HKUDS/AI-Trader)
-[![GitHub forks](https://img.shields.io/github/forks/HKUDS/AI-Trader?style=social)](https://github.com/HKUDS/AI-Trader)
+[![GitHub stars](https://img.shields.io/github/stars/jwangkun/BayMax-Trader?style=social)](https://github.com/jwangkun/BayMax-Trader)
+[![GitHub forks](https://img.shields.io/github/forks/jwangkun/BayMax-Trader?style=social)](https://github.com/jwangkun/BayMax-Trader)
 
-**🤖 Experience AI's full potential in financial markets through complete autonomous decision-making!**  
+**🤖 BayMax-Trader: Experience AI's full potential in financial markets through complete autonomous decision-making!**  
+**🎨 Brand new nof0 theme interface for more elegant trading experience!**  
 **🛠️ Pure tool-driven execution with zero human intervention—a genuine AI trading arena!** 🚀
 
 </div>
@@ -743,11 +834,11 @@ The materials provided by the AI-Trader project are for research purposes only a
 *Community Growth Trajectory*
 
 <div align="center">
-  <a href="https://star-history.com/#HKUDS/AI-Trader&Date">
+  <a href="https://star-history.com/#jwangkun/BayMax-Trader&Date">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=HKUDS/AI-Trader&type=Date&theme=dark" />
-      <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=HKUDS/AI-Trader&type=Date" />
-      <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=HKUDS/AI-Trader&type=Date" style="border-radius: 15px; box-shadow: 0 0 30px rgba(0, 217, 255, 0.3);" />
+      <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=jwangkun/BayMax-Trader&type=Date&theme=dark" />
+      <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=jwangkun/BayMax-Trader&type=Date" />
+      <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=jwangkun/BayMax-Trader&type=Date" style="border-radius: 15px; box-shadow: 0 0 30px rgba(0, 217, 255, 0.3);" />
     </picture>
   </a>
 </div>
@@ -755,6 +846,6 @@ The materials provided by the AI-Trader project are for research purposes only a
 ---
 
 <p align="center">
-  <em> ❤️ Thanks for visiting ✨ AI-Trader!</em><br><br>
-  <img src="https://visitor-badge.laobi.icu/badge?page_id=HKUDS.AI-Trader&style=for-the-badge&color=00d4ff" alt="Views">
+  <em> ❤️ Thanks for visiting ✨ BayMax-Trader!</em><br><br>
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=jwangkun.BayMax-Trader&style=for-the-badge&color=00d4ff" alt="Views">
 </p>

@@ -226,7 +226,7 @@ class Nof0Interface {
         selects.forEach(select => {
             if (select) {
                 // Clear existing options except the first one
-                select.innerHTML = '<option value="">所有代理</option>';
+                select.innerHTML = '<option value="">所有Agent</option>';
 
                 agentNames.forEach(agentName => {
                     const option = document.createElement('option');
@@ -618,7 +618,7 @@ class Nof0Interface {
             '最佳表现': bestAgent ? `${this.dataLoader.getAgentDisplayName(bestAgent)} (+${bestReturn.toFixed(2)}%)` : 'N/A',
             '平均收益': `${avgReturn.toFixed(2)}%`,
             '最差收益': `${worstReturn.toFixed(2)}%`,
-            '代理总数': agentNames.length,
+            'Agent总数': agentNames.length,
             '活跃持仓': this.getTotalPositions(),
             '交易总数': this.getTotalTrades()
         };
@@ -887,7 +887,7 @@ class Nof0Interface {
             this.dataLoader.priceCache = {};
             this.dataLoader.agentData = {};
 
-            // 重新加载所有代理数据
+            // 重新加载所有Agent数据
             const newAgentsData = await this.dataLoader.loadAllAgentsData();
             // 检查数据是否有变化
             const hasChanges = this.hasDataChanged(this.agentsData, newAgentsData);
@@ -922,7 +922,7 @@ class Nof0Interface {
 
     // 检查数据是否有变化
     hasDataChanged(oldData, newData) {
-        // 简单的变化检测：比较代理数量和最后更新时间
+        // 简单的变化检测：比较Agent数量和最后更新时间
         const oldAgents = Object.keys(oldData);
         const newAgents = Object.keys(newData);
         
@@ -930,7 +930,7 @@ class Nof0Interface {
             return true;
         }
         
-        // 检查每个代理的最新资产历史记录
+        // 检查每个Agent的最新资产历史记录
         for (const agentName of newAgents) {
             const oldAgent = oldData[agentName];
             const newAgent = newData[agentName];

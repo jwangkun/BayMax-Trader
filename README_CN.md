@@ -1,15 +1,19 @@
 <div align="center">
 
-# 🚀 AI-Trader: Can AI Beat the Market?
-### *让AI在金融市场中一展身手*
+# 🚀 BayMax-Trader: 大白交易员
+### *基于AI-Trader项目优化，新增nof0主题界面*
 
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://python.org)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Feishu](https://img.shields.io/badge/💬Feishu-Group-blue?style=flat)](./Communication.md) 
-[![WeChat](https://img.shields.io/badge/WeChat-Group-green?style=flat&logo=wechat)](./Communication.md)
+[![GitHub](https://img.shields.io/badge/GitHub-BayMax--Trader-blue?style=flat&logo=github)](https://github.com/jwangkun/BayMax-Trader)
 
+**基于AI-Trader项目的增强版本，新增nof0现代化主题界面，让多个大语言模型在纳斯达克100和上证50股票池中完全自主决策、同台竞技！**
 
-**一个AI股票交易代理系统，让多个大语言模型在纳斯达克100和上证50股票池中完全自主决策、同台竞技！**
+## 🎨 新增特性
+- ✨ **nof0现代化主题**: 全新设计的Web界面，提供更优雅的用户体验
+- 🎯 **实时交易监控**: 美观的实时数据展示和交互式图表
+- 📊 **增强的可视化**: 更直观的性能分析和排行榜展示
+- 🌙 **深色/浅色主题**: 支持主题切换，适应不同使用场景
 
 ## 🏆 当前锦标赛排行榜 🏆 
 [*点击查看: AI实时交易*](https://ai4trade.ai)
@@ -36,11 +40,11 @@
 - ✅ **小时级别交易支持** - 从日线级别升级到小时级别交易间隔，实现更精确、更及时的市场参与，具有精细的时间控制。
 
 ### 🎨 用户体验改进
-- ✅ **实时交易仪表板** - 引入所有代理交易活动的实时可视化，提供全面的市场运营监督。
+- ✅ **实时交易仪表板** - 引入所有Agent交易活动的实时可视化，提供全面的市场运营监督。
 
-- ✅ **代理推理显示** - 实现AI决策过程的完全透明，展示详细的推理链，显示每个交易决策是如何形成的。
+- ✅ **Agent推理显示** - 实现AI决策过程的完全透明，展示详细的推理链，显示每个交易决策是如何形成的。
 
-- ✅ **交互式排行榜** - 推出动态性能排名系统，实时更新，允许用户实时跟踪和比较代理性能。
+- ✅ **交互式排行榜** - 推出动态性能排名系统，实时更新，允许用户实时跟踪和比较Agent性能。
 
 ---
 
@@ -54,17 +58,24 @@
 
 ## 🌟 项目介绍
 
-> **AI-Trader让五个不同的AI模型，每个都采用独特的投资策略，在同一个市场中完全自主决策、竞争，看谁能在纳斯达克100或上证50交易中赚得最多！**
+> **BayMax-Trader基于AI-Trader项目优化而来，让五个不同的AI模型，每个都采用独特的投资策略，在同一个市场中完全自主决策、竞争，看谁能在纳斯达克100或上证50交易中赚得最多！**
+
+### 🎯 BayMax-Trader特色
+- 🎨 **nof0现代化主题**: 全新设计的Web界面，采用现代化设计语言
+- 📱 **响应式设计**: 完美适配桌面和移动设备
+- 🌙 **主题切换**: 支持深色/浅色主题，提供个性化体验
+- 📊 **增强可视化**: 更直观的图表展示和数据分析
+- 🚀 **性能优化**: 更快的加载速度和更流畅的交互体验
 
 ### 🎯 核心特性
 
-- 🤖 **完全自主决策**: AI代理100%独立分析、决策、执行，零人工干预
+- 🤖 **完全自主决策**: AIAgent100%独立分析、决策、执行，零人工干预
 - 🛠️ **纯工具驱动架构**: 基于MCP工具链，AI通过标准化工具调用完成所有交易操作
 - 🏆 **多模型竞技场**: 部署多个AI模型（GPT、Claude、Qwen等）进行竞争性交易
 - 📊 **实时性能分析**: 完整的交易记录、持仓监控和盈亏分析
 - 🔍 **智能市场情报**: 集成Jina搜索，获取实时市场新闻和财务报告
 - ⚡ **MCP工具链集成**: 基于Model Context Protocol的模块化工具生态系统
-- 🔌 **可扩展策略框架**: 支持第三方策略和自定义AI代理集成
+- 🔌 **可扩展策略框架**: 支持第三方策略和自定义AIAgent集成
 - ⏰ **历史回放功能**: 时间段回放功能，自动过滤未来信息
 
 
@@ -82,7 +93,7 @@
 ---
 
 ### 🧠 智能交易能力
-AI代理完全自主运行，进行市场研究、制定交易决策，并在无人干预的情况下持续优化策略。
+AIAgent完全自主运行，进行市场研究、制定交易决策，并在无人干预的情况下持续优化策略。
 
 - 📰 **自主市场研究**: 智能检索和过滤市场新闻、分析师报告和财务数据
 - 💡 **独立决策引擎**: 多维度分析驱动完全自主的买卖执行
@@ -103,7 +114,7 @@ AI代理完全自主运行，进行市场研究、制定交易决策，并在无
 🎯 **目标**: 确定哪个AI模型通过纯自主操作获得卓越的投资回报！
 
 ### 🚫 零人工干预
-AI代理完全自主运行，在没有任何人工编程、指导或干预的情况下制定所有交易决策和策略调整。
+AIAgent完全自主运行，在没有任何人工编程、指导或干预的情况下制定所有交易决策和策略调整。
 
 - ❌ **无预编程**: 零预设交易策略或算法规则
 - ❌ **无人工输入**: 完全依赖内在的AI推理能力
@@ -115,7 +126,7 @@ AI代理完全自主运行，在没有任何人工编程、指导或干预的情
 
 ## ⏰ 历史回放架构
 
-AI-Trader Bench的核心创新是其**完全可重放**的交易环境，确保AI代理在历史市场数据上的性能评估具有科学严谨性和可重复性。
+AI-Trader Bench的核心创新是其**完全可重放**的交易环境，确保AIAgent在历史市场数据上的性能评估具有科学严谨性和可重复性。
 
 ### 🔄 时间控制框架
 
@@ -155,15 +166,15 @@ AI只能访问当前时间及之前的数据。不允许未来信息。
 ## 📁 项目架构
 
 ```
-AI-Trader Bench/
+BayMax-Trader/
 ├── 🤖 核心系统
 │   ├── main.py                    # 🎯 主程序入口
 │   ├── agent/
-│   │   ├── base_agent/            # 🧠 通用AI交易代理（美股）
-│   │   │   ├── base_agent.py      # 基础代理类
+│   │   ├── base_agent/            # 🧠 通用AI交易Agent（美股）
+│   │   │   ├── base_agent.py      # 基础Agent类
 │   │   │   └── __init__.py
-│   │   └── base_agent_astock/     # 🇨🇳 A股专用交易代理
-│   │       ├── base_agent_astock.py  # A股代理类
+│   │   └── base_agent_astock/     # 🇨🇳 A股专用交易Agent
+│   │       ├── base_agent_astock.py  # A股Agent类
 │   │       └── __init__.py
 │   └── configs/                   # ⚙️ 配置文件
 │
@@ -199,7 +210,24 @@ AI-Trader Bench/
 │       └── agent_prompt_astock.py # 🇨🇳 A股专用交易提示词
 │
 ├── 🎨 前端界面
-│   └── frontend/                  # 🌐 Web仪表板
+│   ├── frontend/                  # 🌐 原版Web仪表板
+│   └── nof0/                      # ✨ nof0现代化主题界面
+│       ├── index.html             # 🏠 主页面
+│       ├── portfolio.html         # 📊 排行榜页面
+│       ├── models.html            # 🤖 模型页面
+│       ├── config.yaml            # ⚙️ 主题配置文件
+│       └── assets/                # 🎨 静态资源
+│           ├── css/               # 样式文件
+│           │   ├── nof0-styles.css    # nof0主题样式
+│           │   ├── styles.css         # 基础样式
+│           │   └── models.css         # 模型页面样式
+│           └── js/                # JavaScript文件
+│               ├── nof0-interface.js  # nof0界面逻辑
+│               ├── nof0-chart.js      # 图表组件
+│               ├── config-loader.js   # 配置加载器
+│               ├── data-loader.js     # 数据加载器
+│               ├── theme.js           # 主题切换
+│               └── ...
 │
 ├── 📋 配置与文档
 │   ├── configs/                   # ⚙️ 系统配置
@@ -212,32 +240,33 @@ AI-Trader Bench/
         ├── main.sh                # 一键完整流程（美股）
         ├── main_step1.sh          # 美股：数据准备
         ├── main_step2.sh          # 美股：启动MCP服务
-        ├── main_step3.sh          # 美股：运行交易代理
+        ├── main_step3.sh          # 美股：运行交易Agent
         ├── main_a_stock_step1.sh  # A股：数据准备
         ├── main_a_stock_step2.sh  # A股：启动MCP服务
-        ├── main_a_stock_step3.sh  # A股：运行交易代理
-        └── start_ui.sh            # 启动Web界面
+        ├── main_a_stock_step3.sh  # A股：运行交易Agent
+        ├── start_ui.sh            # 启动原版Web界面
+        └── start_nof0.sh          # 启动nof0主题界面
 ```
 
 ### 🔧 核心组件详解
 
 #### 🎯 主程序 (`main.py`)
 - **多模型并发**: 同时运行多个AI模型进行交易
-- **动态代理加载**: 基于配置文件自动加载对应的代理类型
+- **动态Agent加载**: 基于配置文件自动加载对应的Agent类型
 - **配置管理**: 支持JSON配置文件和环境变量
 - **日期管理**: 灵活的交易日历和日期范围设置
 - **错误处理**: 完善的异常处理和重试机制
 
-#### 🤖 AI代理系统
-| 代理类型 | 模块路径 | 适用场景 | 特性 |
+#### 🤖 AIAgent系统
+| Agent类型 | 模块路径 | 适用场景 | 特性 |
 |---------|---------|---------|------|
 | **BaseAgent** | `agent.base_agent` | 美股/A股通用 | 灵活的市场切换，可配置股票池 |
 | **BaseAgentAStock** | `agent.base_agent_astock` | A股专用 | 内置A股规则，上证50默认池，中文提示词 |
 
 **架构优势**：
-- 🔄 **清晰分离**: 美股和A股代理独立维护，互不干扰
-- 🎯 **专用优化**: A股代理针对中国市场特性深度优化
-- 🔌 **易于扩展**: 支持添加更多市场专用代理（如港股、加密货币等）
+- 🔄 **清晰分离**: 美股和A股Agent独立维护，互不干扰
+- 🎯 **专用优化**: A股Agent针对中国市场特性深度优化
+- 🔌 **易于扩展**: 支持添加更多市场专用Agent（如港股、加密货币等）
 
 #### 🛠️ MCP工具链
 | 工具 | 功能 | 市场支持 | API |
@@ -283,8 +312,8 @@ AI-Trader Bench/
 
 ```bash
 # 1. 克隆项目
-git clone https://github.com/HKUDS/AI-Trader.git
-cd AI-Trader
+git clone https://github.com/jwangkun/BayMax-Trader.git
+cd BayMax-Trader
 
 # 2. 安装依赖
 pip install -r requirements.txt
@@ -316,7 +345,7 @@ MATH_HTTP_PORT=8000
 SEARCH_HTTP_PORT=8001
 TRADE_HTTP_PORT=8002
 GETPRICE_HTTP_PORT=8003
-# 🧠 AI代理配置
+# 🧠 AIAgent配置
 AGENT_MAX_STEP=30             # 最大推理步数
 ```
 
@@ -344,7 +373,7 @@ bash scripts/main.sh
 # 或分步运行：
 bash scripts/main_step1.sh  # 步骤1: 准备数据
 bash scripts/main_step2.sh  # 步骤2: 启动MCP服务
-bash scripts/main_step3.sh  # 步骤3: 运行交易代理
+bash scripts/main_step3.sh  # 步骤3: 运行交易Agent
 ```
 
 #### 🇨🇳 A股市场（上证50）
@@ -352,14 +381,18 @@ bash scripts/main_step3.sh  # 步骤3: 运行交易代理
 # 分步运行：
 bash scripts/main_a_stock_step1.sh  # 步骤1: 准备A股数据
 bash scripts/main_a_stock_step2.sh  # 步骤2: 启动MCP服务
-bash scripts/main_a_stock_step3.sh  # 步骤3: 运行A股交易代理
+bash scripts/main_a_stock_step3.sh  # 步骤3: 运行A股交易Agent
 ```
 
 #### 🌐 Web界面
 ```bash
-# 启动Web界面
+# 启动原版Web界面
 bash scripts/start_ui.sh
 # 访问: http://localhost:8888
+
+# 启动nof0现代化主题界面
+bash scripts/start_nof0.sh
+# 访问: http://localhost:8080
 ```
 
 ---
@@ -446,7 +479,7 @@ python main.py configs/astock_config.json
 #### 📅 A股配置示例 (使用 BaseAgentAStock)
 ```json
 {
-  "agent_type": "BaseAgentAStock",  // A股专用代理
+  "agent_type": "BaseAgentAStock",  // A股专用Agent
   "market": "cn",                   // 市场类型："cn" A股（可选，会被忽略，始终使用cn）
   "date_range": {
     "init_date": "2025-10-09",      // 回测开始日期
@@ -470,6 +503,7 @@ python main.py configs/astock_config.json
 
 ### 📈 启动Web界面
 
+#### 原版界面
 ```bash
 cd docs
 python3 -m http.server 8000
@@ -479,10 +513,49 @@ python3 -m http.server 8000
 或者使用启动脚本：
 
 ```bash
-# 启动Web界面
+# 启动原版Web界面
 bash scripts/start_ui.sh
 # 访问: http://localhost:8888
 ```
+
+#### nof0现代化主题界面
+```bash
+# 启动nof0主题界面
+cd nof0
+python3 -m http.server 8080
+# 访问 http://localhost:8080
+```
+
+或者使用启动脚本：
+
+```bash
+# 启动nof0主题界面
+bash scripts/start_nof0.sh
+# 访问: http://localhost:8080
+```
+
+### 🎨 nof0主题特色
+
+nof0主题是BayMax-Trader的全新现代化界面，提供以下特性：
+
+- **🌙 深色/浅色主题**: 支持主题切换，适应不同使用环境
+- **📱 响应式设计**: 完美适配桌面和移动设备
+- **📊 实时数据展示**: 美观的价格滚动条和实时图表
+- **🎯 直观导航**: 清晰的标签页设计，包含实盘、排行榜、模型等页面
+- **⚡ 性能优化**: 更快的加载速度和流畅的动画效果
+- **🎨 现代化设计**: 采用最新的设计语言和视觉效果
+
+#### nof0界面说明
+- **实盘页面** (`index.html`): 主要的交易监控界面，显示账户价值变化图表
+- **排行榜页面** (`portfolio.html`): 展示各AI模型的性能排名和详细分析
+- **模型页面** (`models.html`): 显示各个AI模型的详细信息和配置
+
+#### 配置文件
+nof0主题使用 `config.yaml` 文件进行配置，支持：
+- 多市场配置（美股、A股）
+- Agent模型配置
+- 图表显示设置
+- UI界面设置
 
 
 ## 📈 性能分析
@@ -534,19 +607,19 @@ bash scripts/start_ui.sh
 
 | 参数 | 说明 | 可选值 | 默认值 |
 |------|------|--------|--------|
-| `agent_type` | AI代理类型 | "BaseAgent"（通用）<br>"BaseAgentAStock"（A股专用） | "BaseAgent" |
+| `agent_type` | AIAgent类型 | "BaseAgent"（通用）<br>"BaseAgentAStock"（A股专用） | "BaseAgent" |
 | `market` | 市场类型 | "us"（美股）<br>"cn"（A股）<br>注：使用BaseAgentAStock时自动设为"cn" | "us" |
 | `max_steps` | 最大推理步数 | 正整数 | 30 |
 | `max_retries` | 最大重试次数 | 正整数 | 3 |
 | `base_delay` | 操作延迟(秒) | 浮点数 | 1.0 |
 | `initial_cash` | 初始资金 | 浮点数 | $10,000（美股）<br>¥100,000（A股） |
 
-#### 📋 代理类型说明
+#### 📋 Agent类型说明
 
-| 代理类型 | 适用市场 | 特点 |
+| Agent类型 | 适用市场 | 特点 |
 |---------|---------|------|
-| **BaseAgent** | 美股 / A股 | • 通用交易代理<br>• 通过 `market` 参数切换市场<br>• 灵活配置股票池 |
-| **BaseAgentAStock** | A股专用 | • 专为A股优化的代理<br>• 内置A股交易规则（一手100股、T+1）<br>• 默认上证50股票池<br>• 人民币计价 |
+| **BaseAgent** | 美股 / A股 | • 通用交易Agent<br>• 通过 `market` 参数切换市场<br>• 灵活配置股票池 |
+| **BaseAgentAStock** | A股专用 | • 专为A股优化的Agent<br>• 内置A股交易规则（一手100股、T+1）<br>• 默认上证50股票池<br>• 人民币计价 |
 
 ### 📊 数据格式
 
@@ -605,20 +678,20 @@ data/agent_data/
 
 ## 🔌 第三方策略集成
 
-AI-Trader Bench采用模块化设计，支持轻松集成第三方策略和自定义AI代理。
+AI-Trader Bench采用模块化设计，支持轻松集成第三方策略和自定义AIAgent。
 
 ### 🛠️ 集成方式
 
-#### 1. 自定义AI代理
+#### 1. 自定义AIAgent
 ```python
-# 创建新的AI代理类
+# 创建新的AIAgent类
 class CustomAgent(BaseAgent):
     def __init__(self, model_name, **kwargs):
         super().__init__(model_name, **kwargs)
         # 添加自定义逻辑
 ```
 
-#### 2. 注册新代理
+#### 2. 注册新Agent
 ```python
 # 在 main.py 中注册
 AGENT_REGISTRY = {
@@ -630,7 +703,7 @@ AGENT_REGISTRY = {
         "module": "agent.base_agent_astock.base_agent_astock",
         "class": "BaseAgentAStock"
     },
-    "CustomAgent": {  # 新增自定义代理
+    "CustomAgent": {  # 新增自定义Agent
         "module": "agent.custom.custom_agent",
         "class": "CustomAgent"
     },
@@ -669,21 +742,27 @@ class CustomTool:
 
 ## 🚀 路线图
 
-### 🌟 未来计划
+### 🌟 已完成特性
 - [x] **🇨🇳 A股支持** - ✅ 上证50指数数据集成已完成
-- [ ] **📊 收盘后统计** - 自动收益分析
+- [x] **🎨 nof0现代化主题** - ✅ 全新设计的Web界面已完成
+
+### 🌟 未来计划
+- [ ] **🔗 A股实盘对接** - 对接真实A股交易接口，实现实盘交易
+- [ ] **📊 收盘后统计** - 自动收益分析和报告生成
 - [ ] **🔌 策略市场** - 添加第三方策略分享平台
-- [ ] **🎨 炫酷前端界面** - 现代化Web仪表板
+- [ ] **📱 移动端应用** - 开发移动端App，随时随地监控交易
 - [ ] **₿ 加密货币** - 支持数字货币交易
 - [ ] **📈 更多策略** - 技术分析、量化策略
 - [ ] **⏰ 高级回放** - 支持分钟级时间精度和实时回放
 - [ ] **🔍 智能过滤** - 更精确的未来信息检测和过滤
+- [ ] **🤖 更多AI模型** - 集成更多大语言模型进行竞技
 
 
 ## 📞 支持与社区
 
-- **💬 讨论**: [GitHub Discussions](https://github.com/HKUDS/AI-Trader/discussions)
-- **🐛 问题**: [GitHub Issues](https://github.com/HKUDS/AI-Trader/issues)
+- **💬 讨论**: [GitHub Discussions](https://github.com/jwangkun/BayMax-Trader/discussions)
+- **🐛 问题**: [GitHub Issues](https://github.com/jwangkun/BayMax-Trader/issues)
+- **📧 联系**: 如有合作或技术交流需求，欢迎联系
 
 ## 📄 许可证
 
@@ -692,11 +771,13 @@ class CustomTool:
 ## 🙏 致谢
 
 感谢以下开源项目和服务：
+- [AI-Trader](https://github.com/HKUDS/AI-Trader) - 原始项目基础
 - [LangChain](https://github.com/langchain-ai/langchain) - AI应用开发框架
 - [MCP](https://github.com/modelcontextprotocol) - Model Context Protocol
 - [Alpha Vantage](https://www.alphavantage.co/) - 美股金融数据API
 - [Tushare](https://tushare.pro/) - A股市场数据API
 - [Jina AI](https://jina.ai/) - 信息搜索服务
+- [Chart.js](https://www.chartjs.org/) - 图表库
 
 ## 👥 管理员
 
@@ -724,8 +805,8 @@ class CustomTool:
 </div>
 
 <div align="center">
-  <a href="https://github.com/HKUDS/AI-Trader/graphs/contributors">
-    <img src="https://contrib.rocks/image?repo=HKUDS/AI-Trader" style="border-radius: 15px; box-shadow: 0 0 20px rgba(0, 217, 255, 0.3);" />
+  <a href="https://github.com/jwangkun/BayMax-Trader/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=jwangkun/BayMax-Trader" style="border-radius: 15px; box-shadow: 0 0 20px rgba(0, 217, 255, 0.3);" />
   </a>
 </div>
 
@@ -739,10 +820,11 @@ AI-Trader项目所提供的资料仅供研究之用，并不构成任何投资�
 
 **🌟 如果这个项目对你有帮助，请给我们一个Star！**
 
-[![GitHub stars](https://img.shields.io/github/stars/HKUDS/AI-Trader?style=social)](https://github.com/HKUDS/AI-Trader)
-[![GitHub forks](https://img.shields.io/github/forks/HKUDS/AI-Trader?style=social)](https://github.com/HKUDS/AI-Trader)
+[![GitHub stars](https://img.shields.io/github/stars/jwangkun/BayMax-Trader?style=social)](https://github.com/jwangkun/BayMax-Trader)
+[![GitHub forks](https://img.shields.io/github/forks/jwangkun/BayMax-Trader?style=social)](https://github.com/jwangkun/BayMax-Trader)
 
-**🤖 让AI在金融市场中完全自主决策、一展身手！**  
+**🤖 BayMax-Trader: 让AI在金融市场中完全自主决策、一展身手！**  
+**🎨 全新nof0主题界面，更优雅的交易体验！**  
 **🛠️ 纯工具驱动，零人工干预，真正的AI交易竞技场！** 🚀
 
 </div>
@@ -754,11 +836,11 @@ AI-Trader项目所提供的资料仅供研究之用，并不构成任何投资�
 *社区增长轨迹*
 
 <div align="center">
-  <a href="https://star-history.com/#HKUDS/AI-Trader&Date">
+  <a href="https://star-history.com/#jwangkun/BayMax-Trader&Date">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=HKUDS/AI-Trader&type=Date&theme=dark" />
-      <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=HKUDS/AI-Trader&type=Date" />
-      <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=HKUDS/AI-Trader&type=Date" style="border-radius: 15px; box-shadow: 0 0 30px rgba(0, 217, 255, 0.3);" />
+      <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=jwangkun/BayMax-Trader&type=Date&theme=dark" />
+      <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=jwangkun/BayMax-Trader&type=Date" />
+      <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=jwangkun/BayMax-Trader&type=Date" style="border-radius: 15px; box-shadow: 0 0 30px rgba(0, 217, 255, 0.3);" />
     </picture>
   </a>
 </div>
@@ -766,6 +848,6 @@ AI-Trader项目所提供的资料仅供研究之用，并不构成任何投资�
 ---
 
 <p align="center">
-  <em> ❤️ 感谢访问 ✨ AI-Trader!</em><br><br>
-  <img src="https://visitor-badge.laobi.icu/badge?page_id=HKUDS.AI-Trader&style=for-the-badge&color=00d4ff" alt="Views">
+  <em> ❤️ 感谢访问 ✨ BayMax-Trader!</em><br><br>
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=jwangkun.BayMax-Trader&style=for-the-badge&color=00d4ff" alt="Views">
 </p>

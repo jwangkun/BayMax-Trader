@@ -1,6 +1,6 @@
 # 配置文件
 
-此目录包含AI-Trader Bench的配置文件。这些JSON配置文件定义了交易代理在执行过程中使用的参数和设置。
+此目录包含AI-Trader Bench的配置文件。这些JSON配置文件定义了交易Agent在执行过程中使用的参数和设置。
 
 ## 文件说明
 
@@ -17,9 +17,9 @@
 
 主要的配置文件，定义了所有系统参数。该文件由`main.py`加载，包含以下部分：
 
-#### 代理配置
-- **`agent_type`**: 指定要使用的代理类
-- **`agent_config`**: 代理特定参数
+#### Agent配置
+- **`agent_type`**: 指定要使用的Agent类
+- **`agent_config`**: Agent特定参数
   - `max_steps`: 每次交易决策的最大推理步数（默认：30）
   - `max_retries`: 失败操作的最大重试次数（默认：3）
   - `base_delay`: 操作间的基础延迟时间（秒）（默认：1.0）
@@ -40,7 +40,7 @@
 
 #### 日志配置
 - **`log_config`**: 日志参数
-  - `log_path`: 存储代理数据和日志的目录路径
+  - `log_path`: 存储Agent数据和日志的目录路径
 
 ## 使用方法
 
@@ -182,14 +182,14 @@ python main.py configs/test_real_hour_config.json
 }
 ```
 
-## 代理类型说明
+## Agent类型说明
 
-### BaseAgent（通用代理）
+### BaseAgent（通用Agent）
 - **市场支持**：美股或A股（通过`market`参数配置）
-- **使用场景**：通用交易代理，支持灵活的市场选择
+- **使用场景**：通用交易Agent，支持灵活的市场选择
 - **股票池**：可配置（美股默认纳斯达克100，A股默认上证50）
 
-### BaseAgentAStock（A股专用代理）
+### BaseAgentAStock（A股专用Agent）
 - **市场支持**：仅A股市场
 - **使用场景**：专为A股优化，内置中国市场交易规则
 - **股票池**：默认上证50
@@ -201,16 +201,16 @@ python main.py configs/test_real_hour_config.json
 - 系统会验证日期范围，确保`init_date`不大于`end_date`
 - 只有`enabled: true`的模型才会用于交易模拟
 - 配置错误会导致系统退出并显示相应的错误消息
-- 配置系统通过`AGENT_REGISTRY`映射支持动态代理类加载
+- 配置系统通过`AGENT_REGISTRY`映射支持动态Agent类加载
 - 使用`BaseAgentAStock`时，`market`参数会自动设置为`"cn"`
 - 初始资金建议：美股 $10,000，A股 ¥100,000
 
 ## 配置参数详解
 
-### 代理类型 (agent_type)
+### Agent类型 (agent_type)
 目前支持的类型：
-- `BaseAgent`: 基础交易代理，支持美股和A股市场
-- `BaseAgentAStock`: A股专用交易代理，内置A股交易规则
+- `BaseAgent`: 基础交易Agent，支持美股和A股市场
+- `BaseAgentAStock`: A股专用交易Agent，内置A股交易规则
 
 ### 模型配置 (models)
 每个模型需要包含以下字段：
@@ -219,11 +219,11 @@ python main.py configs/test_real_hour_config.json
 - `signature`: 模型签名，用于标识特定模型版本
 - `enabled`: 是否启用该模型参与交易
 
-### 代理参数 (agent_config)
-- `max_steps`: 控制AI代理的推理深度，数值越大分析越深入但耗时越长
+### Agent参数 (agent_config)
+- `max_steps`: 控制AIAgent的推理深度，数值越大分析越深入但耗时越长
 - `max_retries`: 操作失败时的重试次数，提高系统稳定性
 - `base_delay`: 操作间延迟，避免API调用过于频繁
 - `initial_cash`: 初始资金，影响交易策略和风险控制
 
 ### 日志路径 (log_config)
-- `log_path`: 所有代理数据、交易记录和日志的存储位置
+- `log_path`: 所有Agent数据、交易记录和日志的存储位置

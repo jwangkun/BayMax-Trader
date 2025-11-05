@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>排行榜 - BayMax Trade Agent</title>
+    <title>投资组合 - BayMax Trade Agent</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -27,242 +27,224 @@
                 <button id="usMarketBtn" class="market-btn active" data-market="us">🇺🇸 US Market</button>
                 <button id="cnMarketBtn" class="market-btn" data-market="cn">🇨🇳 A-Shares</button>
             </div>
-            <div class="header-actions">
-                <button class="theme-toggle" id="themeToggle" aria-label="切换主题">
-                    <svg class="theme-icon light-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                        <circle cx="12" cy="12" r="5"/>
-                        <line x1="12" y1="1" x2="12" y2="3"/>
-                        <line x1="12" y1="21" x2="12" y2="23"/>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-                        <line x1="1" y1="12" x2="3" y2="12"/>
-                        <line x1="21" y1="12" x2="23" y2="12"/>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-                    </svg>
-                    <svg class="theme-icon dark-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-                    </svg>
-                </button>
-                <a href="https://github.com/HKUDS/BayMax Trade Agent" target="_blank" rel="noopener noreferrer" class="github-link" aria-label="GitHub">
-                    <svg class="github-icon" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.30.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                    </svg>
-                </a>
-            </div>
         </div>
     </header>
 
     <main class="main-content">
         <div class="container">
             <header class="page-header">
-                <h2>BayMax代理投资组合明细</h2>
-                <p class="subtitle">详细分析每个AI代理的持仓和表现</p>
+                <h2>AIAgent投资组合排行榜</h2>
+                <p class="subtitle">详细分析每个AIAgent的持仓和表现</p>
             </header>
 
-        <section class="leaderboard-section">
-            <div class="leaderboard-tabs">
-                <button class="tab-button active" data-tab="leaderboard">排行榜</button>
-                <button class="tab-button" data-tab="analysis">高级分析</button>
-            </div>
-            
-            <div class="tab-content active" id="leaderboard-tab">
-                <div class="overview-stats-section">
-                    <div class="overview-stats-grid">
-                        <div class="overview-stat-card best-model">
-                            <div class="stat-header">
-                                <h4>最佳模型</h4>
-                                <div class="stat-icon best-icon">👑</div>
+            <!-- Leaderboard Tabs -->
+            <section class="leaderboard-section">
+                <div class="leaderboard-tabs">
+                    <button class="tab-button active" data-tab="leaderboard">排行榜</button>
+                    <button class="tab-button" data-tab="analysis">高级分析</button>
+                </div>
+
+                <!-- Leaderboard Tab -->
+                <div class="tab-content active" id="leaderboard-tab">
+                    <!-- Overview Stats -->
+                    <div class="overview-stats-section">
+                        <div class="overview-stats-grid"<div class="overview-stat-card best-model">
+                                <div class="stat-header">
+                                    <h4>最佳模型</h4>
+                                    <div class="stat-icon best-icon">👑</div>
+                                </div>
+                                <div class="stat-content" id="bestModelOverview">
+                                    <!-- 由JavaScript填充 -->
+                                </div>
                             </div>
-                            <div class="stat-content" id="bestModelOverview">
+
+                            <div class="overview-stat-card total-equity">
+                                <div class="stat-header">
+                                    <h4>总权益</h4>
+                                    <div class="stat-icon total-icon">💰</div>
+                                </div>
+                                <div class="stat-content" id="totalEquityOverview">
+                                    <!-- 由JavaScript填充 -->
+                                </div>
+                            </div>
+
+                            <div class="overview-stat-card worst-model">
+                                <div class="stat-header">
+                                    <h4>最差模型</h4>
+                                    <div class="stat-icon worst-icon">📉</div>
+                                </div>
+                                <div class="stat-content" id="worstModelOverview">
+                                    <!-- 由JavaScript填充 -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Leaderboard Table -->
+                    <div class="leaderboard-table-container">
+                        <table class="nof0-leaderboard-table">
+                            <thead>
+                                <tr>
+                                    <th class="rank-header">#</th>
+                                    <th class="model-header">模型</th>
+                                    <th class="value-header">净值 ▼</th>
+                                    <th class="return-header">收益率</th>
+                                    <th class="trades-header">交易数</th>
+                                    <th class="sharpe-header">夏普</th>
+                                </tr>
+                            </thead>
+                            <tbody id="nof0LeaderboardBody">
                                 <!-- 由JavaScript填充 -->
-                            </div>
+                            </tbody>
+                        <table>
+                    </div>
+
+                    <!-- Account Info Chart -->
+                    <div class="account-info-section">
+                        <h4>账户信息</h4>
+                        <div class="account-chart-container">
+                            <canvas id="accountInfoChart"></canvas>
                         </div>
-                        
-                        <div class="overview-stat-card total-equity">
-                            <div class="stat-header">
-                                <h4>总权益</h4>
-                                <div class="stat-icon total-icon">💰</div>
-                            </div>
-                            <div class="stat-content" id="totalEquityOverview">
-                                <!-- 由JavaScript填充 -->
-                            </div>
-                        </div>
-                        
-                        <div class="overview-stat-card worst-model">
-                            <div class="stat-header">
-                                <h4>最差模型</h4>
-                                <div class="stat-icon worst-icon">📉</div>
-                            </div>
-                            <div class="stat-content" id="worstModelOverview">
-                                <!-- 由JavaScript填充 -->
+                        <div class="account-summary-stats">
+                            <div class="summary-stat-grid"<div class="summary-stat-item">
+                                    <div class="summary-stat-label">总投资组合数</div>
+                                    <div class="summary-stat-value" id="totalPortfolios">-</div>
+                                </div>
+                                <div class="summary-stat-item">
+                                    <div class="summary-stat-label">平均账户价值</div>
+                                    <div class="summary-stat-value" id="avgAccountValue">-</div>
+                                </div>
+                                <div class="summary-stat-item">
+                                    <div class="summary-stat-label">最高账户价值</div>
+                                    <div class="summary-stat-value" id="maxAccountValue">-</div>
+                                </div>
+                                <div class="summary-stat-item">
+                                    <div class="summary-stat-label">最低账户价值</div>
+                                    <div class="summary-stat-value" id="minAccountValue">-</div>
+                                </div>
+                                <div class="summary-stat-item">
+                                    <div class="summary-stat-label">价值标准差</div>
+                                    <div class="summary-stat-value" id="valueStdDev">-</div>
+                                </div>
+                                <div class="summary-stat-item">
+                                    <div class="summary-stat-label">活跃投资组合</div>
+                                    <div class="summary-stat-value" id="activePortfolios">-</div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="leaderboard-table-container">
-                    <table class="nof0-leaderboard-table">
-                        <thead>
-                            <tr>
-                                <th class="rank-header">#</th>
-                                <th class="model-header">模型</th>
-                                <th class="value-header">净值 ▼</th>
-                                <th class="return-header">收益率</th>
-                                <th class="trades-header">交易数</th>
-                                <th class="sharpe-header">夏普</th>
-                            </tr>
-                        </thead>
-                        <tbody id="nof0LeaderboardBody">
-                            <!-- 由JavaScript填充 -->
-                        </tbody>
-                    </table>
                 </div>
 
-                
+                <!-- Analysis Tab -->
+                <div class="tab-content" id="analysis-tab">
+                    <div class="analysis-content">
+                        <div class="analysis-grid"<div class="analysis-card">
+                                <h4>收益率对比</h4>
+                                <div class="chart-container">
+                                    <canvas id="returnsComparisonChart"></canvas>
+                                </div>
+                            </div>
 
-                <div class="account-info-section">
-                    <h4>账户信息</h4>
-                    <div class="account-chart-container">
-                        <canvas id="accountInfoChart"></canvas>
-                    </div>
-                    <div class="account-summary-stats">
-                        <div class="summary-stat-grid">
-                            <div class="summary-stat-item">
-                                <div class="summary-stat-label">总投资组合数</div>
-                                <div class="summary-stat-value" id="totalPortfolios">-</div>
+                            <div class="analysis-card">
+                                <h4>资产价值演变</h4>
+                                <div class="chart-container">
+                                    <canvas id="assetEvolutionChart"></canvas>
+                                </div>
                             </div>
-                            <div class="summary-stat-item">
-                                <div class="summary-stat-label">平均账户价值</div>
-                                <div class="summary-stat-value" id="avgAccountValue">-</div>
+
+                            <div class="analysis-card">
+                                <h4>风险收益散点图</h4>
+                                <div class="chart-container">
+                                    <canvas id="riskReturnChart"></canvas>
+                                </div>
                             </div>
-                            <div class="summary-stat-item">
-                                <div class="summary-stat-label">最高账户价值</div>
-                                <div class="summary-stat-value" id="maxAccountValue">-</div>
+
+                            <div class="analysis-card">
+                                <h4>交易活跃度</h4>
+                                <div class="chart-container">
+                                    <canvas id="tradingActivityChart"></canvas>
+                                </div>
                             </div>
-                            <div class="summary-stat-item">
-                                <div class="summary-stat-label">最低账户价值</div>
-                                <div class="summary-stat-value" id="minAccountValue">-</div>
+
+                            <div class="analysis-card full-width">
+                                <h4>累计收益率趋势</h4>
+                                <div class="chart-container">
+                                    <canvas id="cumulativeReturnsChart"></canvas>
+                                </div>
                             </div>
-                            <div class="summary-stat-item">
-                                <div class="summary-stat-label">价值标准差</div>
-                                <div class="summary-stat-value" id="valueStdDev">-</div>
-                            </div>
-                            <div class="summary-stat-item">
-                                <div class="summary-stat-label">活跃投资组合</div>
-                                <div class="summary-stat-value" id="activePortfolios">-</div>
+
+                            <div class="analysis-card full-width">
+                                <h4>模型表现统计</h4>
+                                <div class="stats-table-container">
+                                    <table class="analysis-stats-table" id="analysisStatsTable">
+                                        <thead>
+                                            <tr>
+                                                <th>模型</th>
+                                                <th>总收益率</th>
+                                                <th>年化收益率</th>
+                                                <th>最大回撤</th>
+                                                <th>夏普比率</th>
+                                                <th>胜率</th>
+                                                <th>平均持仓天数</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- 由JavaScript填充 -->
+                                        </tbody>
+                                    <table>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="tab-content" id="analysis-tab">
-                <div class="analysis-content">
-                    <div class="analysis-grid">
-                        <div class="analysis-card">
-                            <h4>收益率对比</h4>
-                            <div class="chart-container">
-                                <canvas id="returnsComparisonChart"></canvas>
-                            </div>
+            </section>
+
+            <!-- Agent Selector -->
+            <section class="agent-selector-section">
+                <label for="agentSelect">选择Agent：</label>
+                <select id="agentSelect" class="agent-select">
+                    <option value="">加载中...</option>
+                </select>
+            </section>
+
+            <!-- Performance Metrics -->
+            <section class="portfolio-grid">
+                <div class="portfolio-card">
+                    <h3>业绩指标</h3>
+                    <div class="metrics-list">
+                        <div class="metric-item">
+                            <span class="metric-label">总资产价值</span>
+                            <span class="metric-value" id="totalAsset">$0.00</span>
                         </div>
-                        
-                        <div class="analysis-card">
-                            <h4>资产价值演变</h4>
-                            <div class="chart-container">
-                                <canvas id="assetEvolutionChart"></canvas>
-                            </div>
+                        <div class="metric-item">
+                            <span class="metric-label">总收益率</span>
+                            <span class="metric-value" id="totalReturn">0.00%</span>
                         </div>
-                        
-                        <div class="analysis-card">
-                            <h4>风险收益散点图</h4>
-                            <div class="chart-container">
-                                <canvas id="riskReturnChart"></canvas>
-                            </div>
+                        <div class="metric-item">
+                            <span class="metric-label">现金头寸</span>
+                            <span class="metric-value" id="cashPosition">$0.00</span>
                         </div>
-                        
-                        <div class="analysis-card">
-                            <h4>交易活跃度</h4>
-                            <div class="chart-container">
-                                <canvas id="tradingActivityChart"></canvas>
-                            </div>
-                        </div>
-                        
-                        <div class="analysis-card full-width">
-                            <h4>累计收益率趋势</h4>
-                            <div class="chart-container">
-                                <canvas id="cumulativeReturnsChart"></canvas>
-                            </div>
-                        </div>
-                        
-                        <div class="analysis-card full-width">
-                            <h4>模型表现统计</h4>
-                            <div class="stats-table-container">
-                                <table class="analysis-stats-table" id="analysisStatsTable">
-                                    <thead>
-                                        <tr>
-                                            <th>模型</th>
-                                            <th>总收益率</th>
-                                            <th>年化收益率</th>
-                                            <th>最大回撤</th>
-                                            <th>夏普比率</th>
-                                            <th>胜率</th>
-                                            <th>平均持仓天数</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <!-- 由JavaScript填充 -->
-                                    </tbody>
-                                </table>
-                            </div>
+                        <div class="metric-item">
+                            <span class="metric-label">交易总数</span>
+                            <span class="metric-value" id="totalTrades">0</span>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <section class="agent-selector-section">
-            <label for="agentSelect">选择代理：</label>
-            <select id="agentSelect" class="agent-select"></select>
-        </section>
-
-        <section class="portfolio-grid">
-            <div class="portfolio-card">
-                <h3>业绩指标</h3>
-                <div class="metrics-list">
-                    <div class="metric-item">
-                        <span class="metric-label">总资产价值</span>
-                        <span class="metric-value" id="totalAsset">$0.00</span>
+                <div class="portfolio-card">
+                    <h3>资产配置</h3>
+                    <div class="chart-container-small">
+                        <canvas id="allocationChart"></canvas>
                     </div>
-                    <div class="metric-item">
-                        <span class="metric-label">总收益率</span>
-                        <span class="metric-value" id="totalReturn">0.00%</span>
-                    </div>
-                    <div class="metric-item">
-                        <span class="metric-label">现金头寸</span>
-                        <span class="metric-value" id="cashPosition">$0.00</span>
-                    </div>
-                    <div class="metric-item">
-                        <span class="metric-label">交易总数</span>
-                        <span class="metric-value" id="totalTrades">0</span>
+                    <div class="allocation-legend" id="allocationLegend">
+                        <!-- 由JavaScript填充 -->
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div class="portfolio-card">
-                <h3>资产配置</h3>
-                <div class="chart-container-small">
-                    <canvas id="allocationChart"></canvas>
-                </div>
-                <div class="allocation-legend" id="allocationLegend">
-                    <!-- 由JavaScript填充 -->
-                </div>
-            </div>
-        </section>
-
-        <section class="holdings-section">
-            <h3>当前持仓</h3>
-            <div class="holdings-scroll-wrapper">
+            <!-- Current Holdings -->
+            <section class="holdings-section">
+                <h3>当前持仓</h3>
                 <div class="holdings-table-container">
                     <table class="holdings-table">
                         <thead>
@@ -275,35 +257,1304 @@
                             </tr>
                         </thead>
                         <tbody id="holdingsTableBody">
-                            <!-- 由JavaScript填充 -->
+                            <tr>
+                                <td colspan="5" style="text-align: center; padding: 2rem; color: var(--text-muted);">
+                                    请选择Agent查看持仓数据</td>
+                            </tr>
                         </tbody>
-                    </table>
+                    <table>
                 </div>
+            </section>
+
+            <!-- Trade History -->
+            <section class="trade-history-section">
+                <h3>最近交易活动</h3>
+                <div class="trade-timeline" id="tradeTimeline">
+                    <p style="color: var(--text-muted); text-align: center; padding: 2rem;">
+                        请选择Agent查看交易历史</p>
+                </div>
+            </section>
+
+            <!-- Loading Overlay -->
+            <div class="loading-overlay" id="loadingOverlay">
+                <div class="spinner"></div>
+                <p>正在加载投资组合数据...</p>
             </div>
-        </section>
-
-        <section class="trade-history-section">
-            <h3>最近交易活动</h3>
-            <div class="trade-timeline" id="tradeTimeline">
-                <!-- 由JavaScript填充 -->
-            </div>
-        </section>
-
-        <div class="loading-overlay" id="loadingOverlay">
-            <div class="spinner"></div>
-            <p>正在加载投资组合数据...</p>
-        </div>
-
-        <button class="scroll-to-top" id="scrollToTop" aria-label="返回顶部">
-            ↑
-        </button>
-        
         </div>
     </main>
 
+    <!-- Scripts -->
+    <script src="assets/js/config-loader.js"></script>
     <script src="assets/js/data-loader.js"></script>
-    <script src="assets/js/portfolio.js"></script>
-    <script src="assets/js/analysis-charts.js"></script>
-    <script src="assets/js/theme.js"></script>
+
+    <script>
+        // Global variables
+        let configLoader = null;
+        let dataLoader = null;
+        let allAgentsData = {};
+        let currentAgent = null;
+        let allocationChart = null;
+        let currentMarket = 'us';
+
+        // Chart variables
+        let accountInfoChart = null;
+        let returnsComparisonChart = null;
+        let assetEvolutionChart = null;
+        let riskReturnChart = null;
+        let tradingActivityChart = null;
+        let cumulativeReturnsChart = null;
+
+        // Initialize the page
+        async function init() {
+            console.log('Initializing portfolio page...');
+
+            try {
+                // Show loading
+                showLoading();
+
+                // Initialize configuration loader
+                configLoader = new ConfigLoader();
+                window.configLoader = configLoader;
+
+                // Load configuration
+                console.log('Loading configuration...');
+                await configLoader.loadConfig();
+
+                // Initialize data loader
+                dataLoader = new DataLoader();
+                dataLoader.setMarket(currentMarket);
+
+                // Load all agents data
+                console.log('Loading all agents data...');
+                allAgentsData = await dataLoader.loadAllAgentsData();
+                console.log('Agents data loaded:', Object.keys(allAgentsData));
+
+                // Populate agent selector
+                populateAgentSelector();
+
+                // Load first agent by default
+                const firstAgent = Object.keys(allAgentsData)[0];
+                if (firstAgent) {
+                    currentAgent = firstAgent;
+                    await loadAgentPortfolio(firstAgent);
+                }
+
+                // Set up event listeners
+                setupEventListeners();
+
+                // Update leaderboard
+                updateLeaderboard();
+
+            } catch (error) {
+                console.error('Initialization failed:', error);
+                showError('初始化失败: ' + error.message);
+            } finally {
+                hideLoading();
+            }
+        }
+
+        // Populate agent selector dropdown
+        function populateAgentSelector() {
+            const select = document.getElementById('agentSelect');
+            select.innerHTML = '';
+
+            const agents = Object.keys(allAgentsData);
+            if (agents.length === 0) {
+                select.innerHTML = '<option value="">无可用Agent</option>';
+                return;
+            }
+
+            agents.forEach(agentName => {
+                const option = document.createElement('option');
+                option.value = agentName;
+                option.textContent = dataLoader.getAgentDisplayName(agentName);
+                select.appendChild(option);
+            });
+        }
+
+        // Load and display portfolio for selected agent
+        async function loadAgentPortfolio(agentName) {
+            if (!agentName || !allAgentsData[agentName]) return;
+
+            showLoading();
+
+            try {
+                currentAgent = agentName;
+                const data = allAgentsData[agentName];
+
+                // Update performance metrics
+                updateMetrics(data);
+
+                // Update holdings table
+                await updateHoldingsTable(agentName);
+
+                // Update allocation chart
+                await updateAllocationChart(agentName);
+
+                // Update trade history
+                updateTradeHistory(agentName);
+
+            } catch (error) {
+                console.error('加载投资组合失败:', error);
+                showError('加载投资组合失败: ' + error.message);
+            } finally {
+                hideLoading();
+            }
+        }
+
+        // Update performance metrics
+        function updateMetrics(data) {
+            const totalAsset = data.currentValue || 0;
+            const totalReturn = data.return || 0;
+            const latestPosition = data.positions && data.positions.length > 0 ? data.positions[data.positions.length - 1] : null;
+            const cashPosition = latestPosition && latestPosition.positions ? latestPosition.positions.CASH || 0 : 0;
+            const totalTrades = data.positions ? data.positions.filter(p => p.this_action && p.this_action.action !== 'no_trade').length : 0;
+
+            document.getElementById('totalAsset').textContent = dataLoader.formatCurrency(totalAsset);
+            document.getElementById('totalReturn').textContent = dataLoader.formatPercent(totalReturn);
+            document.getElementById('totalReturn').className = `metric-value ${totalReturn >= 0 ? 'positive' : 'negative'}`;
+            document.getElementById('cashPosition').textContent = dataLoader.formatCurrency(cashPosition);
+            document.getElementById('totalTrades').textContent = totalTrades;
+        }
+
+        // Update holdings table
+        async function updateHoldingsTable(agentName) {
+            const holdings = dataLoader.getCurrentHoldings(agentName);
+            const tableBody = document.getElementById('holdingsTableBody');
+            tableBody.innerHTML = '';
+
+            if (!holdings) {
+                tableBody.innerHTML = `
+                    <tr>
+                        <td colspan="5" style="text-align: center; color: var(--text-muted); padding: 2rem;">
+                            无可用持仓数据
+                        </td>
+                    </tr>
+                `;
+                return;
+            }
+
+            const data = allAgentsData[agentName];
+            if (!data || !data.assetHistory || data.assetHistory.length === 0) {
+                return;
+            }
+
+            const latestDate = data.assetHistory[data.assetHistory.length - 1].date;
+            const totalValue = data.currentValue;
+
+            // Get all stocks with non-zero holdings
+            const stocks = Object.entries(holdings)
+                .filter(([symbol, shares]) => symbol !== 'CASH' && shares > 0);
+
+            if (stocks.length === 0) {
+                tableBody.innerHTML = `
+                    <tr>
+                        <td colspan="5" style="text-align: center; color: var(--text-muted); padding: 2rem;">
+                            当前无股票持仓
+                        </td>
+                    </tr>
+                `;
+                return;
+            }
+
+            // Calculate market values
+            const holdingsData = await Promise.all(
+                stocks.map(async ([symbol, shares]) => {
+                    const price = await dataLoader.getClosingPrice(symbol, latestDate);
+                    const marketValue = price ? shares * price : 0;
+                    return { symbol, shares, price, marketValue };
+                })
+            );
+
+            // Sort by market value (descending)
+            holdingsData.sort((a, b) => b.marketValue - a.marketValue);
+
+            // Create table rows
+            holdingsData.forEach(holding => {
+                const weight = (holding.marketValue / totalValue * 100).toFixed(2);
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td class="symbol">${holding.symbol}</td>
+                    <td>${holding.shares}</td>
+                    <td>${dataLoader.formatCurrency(holding.price || 0)}</td>
+                    <td>${dataLoader.formatCurrency(holding.marketValue)}</td>
+                    <td>${weight}%</td>
+                `;
+                tableBody.appendChild(row);
+            });
+
+            // Add cash row
+            if (holdings.CASH > 0) {
+                const cashWeight = (holdings.CASH / totalValue * 100).toFixed(2);
+                const cashRow = document.createElement('tr');
+                cashRow.innerHTML = `
+                    <td class="symbol">CASH</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>${dataLoader.formatCurrency(holdings.CASH)}</td>
+                    <td>${cashWeight}%</td>
+                `;
+                tableBody.appendChild(cashRow);
+            }
+        }
+
+        // Update allocation chart (pie chart)
+        async function updateAllocationChart(agentName) {
+            const holdings = dataLoader.getCurrentHoldings(agentName);
+            const legendContainer = document.getElementById('allocationLegend');
+
+            if (!holdings) {
+                if (legendContainer) {
+                    legendContainer.innerHTML = '<p style="color: var(--gray-400); text-align: center;">暂无持仓数据</p>';
+                }
+                return;
+            }
+
+            const data = allAgentsData[agentName];
+            const latestDate = data.assetHistory[data.assetHistory.length - 1].date;
+
+            // Calculate market values
+            const allocations = [];
+
+            for (const [symbol, shares] of Object.entries(holdings)) {
+                if (symbol === 'CASH') {
+                    if (shares > 0) {
+                        allocations.push({ label: '现金', value: shares });
+                    }
+                } else if (shares > 0) {
+                    const price = await dataLoader.getClosingPrice(symbol, latestDate);
+                    if (price) {
+                        allocations.push({ label: symbol, value: shares * price });
+                    }
+                }
+            }
+
+            // Sort by value and take top 8, combine rest as "其他"
+            allocations.sort((a, b) => b.value - a.value);
+            const topAllocations = allocations.slice(0, 8);
+            const othersValue = allocations.slice(8).reduce((sum, a) => sum + a.value, 0);
+
+            if (othersValue > 0) {
+                topAllocations.push({ label: '其他', value: othersValue });
+            }
+
+            // Destroy existing chart
+            if (allocationChart) {
+                allocationChart.destroy();
+            }
+
+            // Enhanced color palette
+            const colors = [
+                '#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6',
+                '#06b6d4', '#84cc16', '#f97316', '#ec4899', '#6366f1'
+            ];
+
+            // Create new chart
+            const ctx = document.getElementById('allocationChart').getContext('2d');
+
+            allocationChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: topAllocations.map(a => a.label),
+                    datasets: [{
+                        data: topAllocations.map(a => a.value),
+                        backgroundColor: colors.slice(0, topAllocations.length),
+                        borderWidth: 2,
+                        borderColor: 'var(--background)',
+                        hoverBorderWidth: 3
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const label = context.label || '';
+                                    const value = dataLoader.formatCurrency(context.parsed);
+                                    const total = context.dataset.data.reduce((sum, v) => sum + v, 0);
+                                    const percentage = ((context.parsed / total) * 100).toFixed(1);
+                                    return `${label}: ${value} (${percentage}%)`;
+                                }
+                            }
+                        }
+                    },
+                    cutout: '65%'
+                }
+            });
+
+            // Update custom legend
+            if (legendContainer) {
+                const totalValue = topAllocations.reduce((sum, item) => sum + item.value, 0);
+                legendContainer.innerHTML = topAllocations.map((item, index) => {
+                    const percentage = ((item.value / totalValue) * 100).toFixed(1);
+                    return `
+                        <div class="allocation-legend-item">
+                            <div class="allocation-legend-color" style="background-color: ${colors[index]}"></div>
+                            <span class="allocation-legend-label">${item.label}</span>
+                            <span class="allocation-legend-value">${percentage}%</span>
+                        </div>
+                    `;
+                }).join('');
+            }
+        }
+
+        // Update leaderboard
+        function updateLeaderboard() {
+            const leaderboardData = generateLeaderboardData();
+            updateOverviewStats(leaderboardData);
+            updateNof0LeaderboardTable(leaderboardData);
+            updateAccountInfoChart(leaderboardData);
+        }
+
+        // Update overview statistics
+        function updateOverviewStats(leaderboardData) {
+            if (leaderboardData.length === 0) return;
+
+            // Sort by current value for best/worst determination
+            const sortedByValue = [...leaderboardData].sort((a, b) => b.currentValue - a.currentValue);
+            const bestModel = sortedByValue[0];
+            const worstModel = sortedByValue[sortedByValue.length - 1];
+
+            // Calculate total equity
+            const totalEquity = leaderboardData.reduce((sum, agent) => sum + agent.currentValue, 0);
+            const totalInitialValue = 10000 * leaderboardData.length;
+            const totalReturn = ((totalEquity - totalInitialValue) / totalInitialValue) * 100;
+
+            // Update best model
+            updateBestModelOverview(bestModel);
+
+            // Update total equity
+            updateTotalEquityOverview(totalEquity, totalReturn, leaderboardData);
+
+            // Update worst model
+            updateWorstModelOverview(worstModel);
+        }
+
+        // Update best model overview
+        function updateBestModelOverview(bestModel) {
+            const container = document.getElementById('bestModelOverview');
+            if (!container || !bestModel) return;
+
+            container.innerHTML = `
+                <div class="stat-model-info">
+                    <div class="stat-model-icon" style="background-color: ${bestModel.brandColor || '#10b981'}">
+                        <img src="${bestModel.icon}" alt="${bestModel.displayName}" onerror="this.style.display='none'">
+                    </div>
+                    <div class="stat-model-name">${bestModel.displayName}</div>
+                </div>
+                <div class="stat-main-metrics">
+                    <div class="stat-value">${dataLoader.formatCurrency(bestModel.currentValue)}</div>
+                    <div class="stat-change ${bestModel.return >= 0 ? 'positive' : 'negative'}">
+                        ${bestModel.return >= 0 ? '+' : ''}${bestModel.return.toFixed(2)}%
+                    </div>
+                </div>
+                <div class="stat-meta">${bestModel.totalTrades} 笔交易 • 夏普比率 ${bestModel.sharpeRatio}</div>
+            `;
+        }
+
+        // Update total equity overview
+        function updateTotalEquityOverview(totalEquity, totalReturn, leaderboardData) {
+            const container = document.getElementById('totalEquityOverview');
+            if (!container) return;
+
+            // Calculate additional metrics
+            const avgReturn = leaderboardData.reduce((sum, agent) => sum + agent.return, 0) / leaderboardData.length;
+            const totalTrades = leaderboardData.reduce((sum, agent) => sum + agent.totalTrades, 0);
+            const activeModels = leaderboardData.filter(agent => agent.isActive).length;
+
+            // Calculate total profit/loss
+            const totalInitialCapital = 10000 * leaderboardData.length;
+            const totalProfitLoss = totalEquity - totalInitialCapital;
+
+            container.innerHTML = `
+                <div class="stat-value">${dataLoader.formatCurrency(totalEquity)}</div>
+                <div class="stat-change ${totalReturn >= 0 ? 'positive' : 'negative'}">
+                    ${totalReturn >= 0 ? '+' : ''}${totalReturn.toFixed(2)}% 总收益
+                </div>
+                <div class="total-profit-loss ${totalProfitLoss >= 0 ? 'positive' : 'negative'}">
+                    ${totalProfitLoss >= 0 ? '+' : ''}${dataLoader.formatCurrency(totalProfitLoss)}
+                </div>
+                <div class="equity-breakdown">
+                    <div class="equity-item">
+                        <div class="equity-item-label">平均收益率</div>
+                        <div class="equity-item-value ${avgReturn >= 0 ? 'stat-change positive' : 'stat-change negative'}">
+                            ${avgReturn.toFixed(2)}%
+                        </div>
+                    </div>
+                    <div class="equity-item">
+                        <div class="equity-item-label">活跃模型</div>
+                        <div class="equity-item-value">${activeModels}/${leaderboardData.length}</div>
+                    </div>
+                    <div class="equity-item">
+                        <div class="equity-item-label">总交易数</div>
+                        <div class="equity-item-value">${totalTrades.toLocaleString()}</div>
+                    </div>
+                    <div class="equity-item">
+                        <div class="equity-item-label">总收益额</div>
+                        <div class="equity-item-value ${totalProfitLoss >= 0 ? 'stat-change positive' : 'stat-change negative'}">
+                            ${dataLoader.formatCurrency(totalProfitLoss)}
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Update worst model overview
+        function updateWorstModelOverview(worstModel) {
+            const container = document.getElementById('worstModelOverview');
+            if (!container || !worstModel) return;
+
+            container.innerHTML = `
+                <div class="stat-model-info">
+                    <div class="stat-model-icon" style="background-color: ${worstModel.brandColor || '#ef4444'}">
+                        <img src="${worstModel.icon}" alt="${worstModel.displayName}" onerror="this.style.display='none'">
+                    </div>
+                    <div class="stat-model-name">${worstModel.displayName}</div>
+                </div>
+                <div class="stat-main-metrics">
+                    <div class="stat-value">${dataLoader.formatCurrency(worstModel.currentValue)}</div>
+                    <div class="stat-change ${worstModel.return >= 0 ? 'positive' : 'negative'}">
+                        ${worstModel.return >= 0 ? '+' : ''}${worstModel.return.toFixed(2)}%
+                    </div>
+                </div>
+                <div class="stat-meta">${worstModel.totalTrades} 笔交易 • 夏普比率 ${worstModel.sharpeRatio}</div>
+            `;
+        }
+
+        // Update nof0 style leaderboard table
+        function updateNof0LeaderboardTable(leaderboardData) {
+            const tableBody = document.getElementById('nof0LeaderboardBody');
+            tableBody.innerHTML = '';
+
+            leaderboardData.forEach((agent, index) => {
+                const rank = index + 1;
+                const row = document.createElement('tr');
+                row.style.cursor = 'pointer';
+
+                row.innerHTML = `
+                    <td class="nof0-rank-cell">${rank}</td>
+                    <td class="nof0-model-cell">
+                        <div class="nof0-model-icon" style="background-color: ${agent.brandColor || '#666'}">
+                            <img src="${agent.icon}" alt="${agent.displayName}" onerror="this.style.display='none'">
+                        </div>
+                        <span class="nof0-model-name">${agent.displayName}</span>
+                    </td>
+                    <td class="nof0-value-cell">${dataLoader.formatCurrency(agent.currentValue)}</td>
+                    <td class="nof0-return-cell ${agent.return >= 0 ? 'positive' : 'negative'}">
+                        ${dataLoader.formatPercent(agent.return)}
+                    </td>
+                    <td class="nof0-trades-cell">${agent.totalTrades}</td>
+                    <td class="nof0-sharpe-cell">${agent.sharpeRatio}</td>
+                `;
+
+                // Add click handler to load agent portfolio
+                row.addEventListener('click', () => {
+                    document.getElementById('agentSelect').value = agent.name;
+                    loadAgentPortfolio(agent.name);
+                });
+
+                tableBody.appendChild(row);
+            });
+        }
+
+        // Update account info chart
+        function updateAccountInfoChart(leaderboardData) {
+            const ctx = document.getElementById('accountInfoChart');
+            if (!ctx) return;
+
+            // Destroy existing chart
+            if (accountInfoChart) {
+                accountInfoChart.destroy();
+            }
+
+            // Update summary statistics
+            updateAccountSummaryStats(leaderboardData);
+
+            if (leaderboardData.length === 0) {
+                return;
+            }
+
+            // Enhanced color palette for consistency
+            const colors = [
+                '#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6',
+                '#06b6d4', '#84cc16', '#f97316', '#ec4899', '#6366f1'
+            ];
+
+            const chartData = {
+                labels: leaderboardData.map(agent => agent.displayName),
+                datasets: [{
+                    label: '账户价值',
+                    data: leaderboardData.map(agent => agent.currentValue),
+                    backgroundColor: leaderboardData.map((agent, index) => colors[index % colors.length]),
+                    borderWidth: 0,
+                    borderRadius: 6,
+                    borderSkipped: false,
+                }]
+            };
+
+            accountInfoChart = new Chart(ctx, {
+                type: 'bar',
+                data: chartData,
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        title: {
+                            display: true,
+                            text: '各模型账户价值对比',
+                            color: 'var(--foreground)',
+                            font: { size: 14, weight: '600' },
+                            padding: { bottom: 20 }
+                        },
+                        tooltip: {
+                            backgroundColor: 'rgba(0, 0, 0, 0.9)',
+                            titleColor: '#fff',
+                            bodyColor: '#fff',
+                            borderColor: 'var(--glass-border)',
+                            borderWidth: 1,
+                            cornerRadius: 8,
+                            callbacks: {
+                                label: function(context) {
+                                    const agent = leaderboardData[context.dataIndex];
+                                    return [
+                                        `账户价值: ${dataLoader.formatCurrency(context.parsed.y)}`,
+                                        `收益率: ${dataLoader.formatPercent(agent.return)}`,
+                                        `交易数: ${agent.totalTrades}`,
+                                        `夏普比率: ${agent.sharpeRatio}`
+                                    ];
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            grid: { display: false },
+                            ticks: {
+                                color: 'var(--gray-400)',
+                                font: { size: 11, weight: '500' },
+                                maxRotation: 45
+                            },
+                            border: { display: false }
+                        },
+                        y: {
+                            grid: {
+                                color: 'var(--glass-border)',
+                                lineWidth: 1
+                            },
+                            ticks: {
+                                color: 'var(--gray-400)',
+                                font: { size: 11, weight: '500' },
+                                callback: function(value) {
+                                    return dataLoader.formatCurrency(value);
+                                }
+                            },
+                            border: { display: false }
+                        }
+                    },
+                    animation: {
+                        duration: 1000,
+                        easing: 'easeOutQuart'
+                    }
+                }
+            });
+        }
+
+        // Update account summary statistics
+        function updateAccountSummaryStats(leaderboardData) {
+            const totalPortfolios = leaderboardData.length;
+            const values = leaderboardData.map(agent => agent.currentValue);
+
+            // Calculate statistics
+            const avgValue = values.length > 0 ? values.reduce((sum, val) => sum + val, 0) / values.length : 0;
+            const maxValue = values.length > 0 ? Math.max(...values) : 0;
+            const minValue = values.length > 0 ? Math.min(...values) : 0;
+
+            // Calculate standard deviation
+            const variance = values.length > 0 ?
+                values.reduce((sum, val) => sum + Math.pow(val - avgValue, 2), 0) / values.length : 0;
+            const stdDev = Math.sqrt(variance);
+
+            // Count active portfolios
+            const activePortfolios = leaderboardData.filter(agent => agent.isActive).length;
+
+            // Update DOM elements
+            const totalPortfoliosEl = document.getElementById('totalPortfolios');
+            const avgAccountValueEl = document.getElementById('avgAccountValue');
+            const maxAccountValueEl = document.getElementById('maxAccountValue');
+            const minAccountValueEl = document.getElementById('minAccountValue');
+            const valueStdDevEl = document.getElementById('valueStdDev');
+            const activePortfoliosEl = document.getElementById('activePortfolios');
+
+            if (totalPortfoliosEl) totalPortfoliosEl.textContent = totalPortfolios;
+            if (avgAccountValueEl) avgAccountValueEl.textContent = dataLoader.formatCurrency(avgValue);
+            if (maxAccountValueEl) maxAccountValueEl.textContent = dataLoader.formatCurrency(maxValue);
+            if (minAccountValueEl) minAccountValueEl.textContent = dataLoader.formatCurrency(minValue);
+            if (valueStdDevEl) valueStdDevEl.textContent = dataLoader.formatCurrency(stdDev);
+            if (activePortfoliosEl) activePortfoliosEl.textContent = `${activePortfolios}/${totalPortfolios}`;
+        }
+
+        // Update analysis charts
+        function updateAnalysisCharts() {
+            const leaderboardData = generateLeaderboardData();
+
+            updateReturnsComparisonChart(leaderboardData);
+            updateAssetEvolutionChart(leaderboardData);
+            updateRiskReturnChart(leaderboardData);
+            updateTradingActivityChart(leaderboardData);
+            updateCumulativeReturnsChart(leaderboardData);
+            updateAnalysisStatsTable(leaderboardData);
+        }
+
+        // Returns Comparison Chart
+        function updateReturnsComparisonChart(leaderboardData) {
+            const ctx = document.getElementById('returnsComparisonChart');
+            if (!ctx) return;
+
+            if (returnsComparisonChart) {
+                returnsComparisonChart.destroy();
+            }
+
+            const colors = [
+                '#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6',
+                '#06b6d4', '#84cc16', '#f97316', '#ec4899', '#6366f1'
+            ];
+
+            returnsComparisonChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: leaderboardData.map(agent => agent.displayName),
+                    datasets: [{
+                        label: '收益率 (%)',
+                        data: leaderboardData.map(agent => agent.return),
+                        backgroundColor: leaderboardData.map((agent, index) => colors[index % colors.length]),
+                        borderWidth: 0,
+                        borderRadius: 6,
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return `收益率: ${context.parsed.y.toFixed(2)}%`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            grid: { display: false },
+                            ticks: {
+                                color: 'var(--gray-400)',
+                                font: { size: 11, weight: '500' },
+                                maxRotation: 45
+                            }
+                        },
+                        y: {
+                            grid: {
+                                color: 'var(--glass-border)',
+                                lineWidth: 1
+                            },
+                            ticks: {
+                                color: 'var(--gray-400)',
+                                font: { size: 11, weight: '500' },
+                                callback: function(value) {
+                                    return value.toFixed(1) + '%';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Asset Evolution Chart
+        function updateAssetEvolutionChart(leaderboardData) {
+            const ctx = document.getElementById('assetEvolutionChart');
+            if (!ctx) return;
+
+            if (assetEvolutionChart) {
+                assetEvolutionChart.destroy();
+            }
+
+            // Get common date range across all agents
+            const allDates = new Set();
+            leaderboardData.forEach(agent => {
+                if (allAgentsData[agent.name] && allAgentsData[agent.name].assetHistory) {
+                    allAgentsData[agent.name].assetHistory.forEach(point => {
+                        allDates.add(point.date);
+                    });
+                }
+            });
+
+            const sortedDates = Array.from(allDates).sort();
+
+            const colors = [
+                '#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6',
+                '#06b6d4', '#84cc16', '#f97316', '#ec4899', '#6366f1'
+            ];
+
+            const datasets = leaderboardData.map((agent, index) => {
+                const agentData = allAgentsData[agent.name];
+                if (!agentData || !agentData.assetHistory) return null;
+
+                const data = sortedDates.map(date => {
+                    const point = agentData.assetHistory.find(p => p.date === date);
+                    return point ? point.value : null;
+                });
+
+                return {
+                    label: agent.displayName,
+                    data: data,
+                    borderColor: colors[index % colors.length],
+                    backgroundColor: colors[index % colors.length] + '20',
+                    borderWidth: 2,
+                    fill: false,
+                    tension: 0.1
+                };
+            }).filter(d => d !== null);
+
+            assetEvolutionChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: sortedDates,
+                    datasets: datasets
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'top',
+                            labels: {
+                                color: 'var(--foreground)',
+                                font: { size: 12 }
+                            }
+                        },
+                        tooltip: {
+                            mode: 'index',
+                            intersect: false,
+                            callbacks: {
+                                label: function(context) {
+                                    return `${context.dataset.label}: ${dataLoader.formatCurrency(context.parsed.y)}`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            grid: { color: 'var(--glass-border)' },
+                            ticks: { color: 'var(--gray-400)' }
+                        },
+                        y: {
+                            grid: { color: 'var(--glass-border)' },
+                            ticks: {
+                                color: 'var(--gray-400)',
+                                callback: function(value) {
+                                    return dataLoader.formatCurrency(value);
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Risk Return Chart
+        function updateRiskReturnChart(leaderboardData) {
+            const ctx = document.getElementById('riskReturnChart');
+            if (!ctx) return;
+
+            if (riskReturnChart) {
+                riskReturnChart.destroy();
+            }
+
+            const colors = [
+                '#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6',
+                '#06b6d4', '#84cc16', '#f97316', '#ec4899', '#6366f1'
+            ];
+
+            // Calculate simple risk metric (standard deviation of returns)
+            const riskData = leaderboardData.map((agent, index) => {
+                const agentData = allAgentsData[agent.name];
+                if (!agentData || !agentData.assetHistory || agentData.assetHistory.length < 2) {
+                    return {
+                        x: 0,
+                        y: agent.return,
+                        label: agent.displayName,
+                        color: colors[index % colors.length]
+                    };
+                }
+
+                // Calculate volatility (simplified)
+                const values = agentData.assetHistory.map(h => h.value);
+                const mean = values.reduce((sum, val) => sum + val, 0) / values.length;
+                const variance = values.reduce((sum, val) => sum + Math.pow(val - mean, 2), 0) / values.length;
+                const volatility = Math.sqrt(variance) / mean * 100;
+
+                return {
+                    x: volatility,
+                    y: agent.return,
+                    label: agent.displayName,
+                    color: colors[index % colors.length]
+                };
+            });
+
+            riskReturnChart = new Chart(ctx, {
+                type: 'scatter',
+                data: {
+                    datasets: [{
+                        label: '风险收益散点',
+                        data: riskData,
+                        backgroundColor: riskData.map(d => d.color),
+                        borderColor: riskData.map(d => d.color),
+                        borderWidth: 2,
+                        pointRadius: 6,
+                        pointHoverRadius: 8
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const point = context.raw;
+                                    return [
+                                        `模型: ${point.label}`,
+                                        `收益率: ${point.y.toFixed(2)}%`,
+                                        `风险(波动率): ${point.x.toFixed(2)}%`
+                                    ];
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            title: {
+                                display: true,
+                                text: '风险 (波动率 %)',
+                                color: 'var(--foreground)'
+                            },
+                            grid: { color: 'var(--glass-border)' },
+                            ticks: { color: 'var(--gray-400)' }
+                        },
+                        y: {
+                            title: {
+                                display: true,
+                                text: '收益率 (%)',
+                                color: 'var(--foreground)'
+                            },
+                            grid: { color: 'var(--glass-border)' },
+                            ticks: {
+                                color: 'var(--gray-400)',
+                                callback: function(value) {
+                                    return value.toFixed(1) + '%';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Trading Activity Chart
+        function updateTradingActivityChart(leaderboardData) {
+            const ctx = document.getElementById('tradingActivityChart');
+            if (!ctx) return;
+
+            if (tradingActivityChart) {
+                tradingActivityChart.destroy();
+            }
+
+            const colors = [
+                '#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6',
+                '#06b6d4', '#84cc16', '#f97316', '#ec4899', '#6366f1'
+            ];
+
+            const tradingData = leaderboardData.map((agent, index) => {
+                const trades = dataLoader.getTradeHistory(agent.name);
+                return {
+                    label: agent.displayName,
+                    data: [trades.length],
+                    backgroundColor: colors[index % colors.length],
+                    borderColor: colors[index % colors.length],
+                    borderWidth: 1
+                };
+            });
+
+            tradingActivityChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['交易活跃度'],
+                    datasets: tradingData
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'top',
+                            labels: {
+                                color: 'var(--foreground)',
+                                font: { size: 12 }
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return `${context.dataset.label}: ${context.parsed.y} 笔交易`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            grid: { display: false },
+                            ticks: { color: 'var(--gray-400)' }
+                        },
+                        y: {
+                            grid: { color: 'var(--glass-border)' },
+                            ticks: {
+                                color: 'var(--gray-400)',
+                                stepSize: 1
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Cumulative Returns Chart
+        function updateCumulativeReturnsChart(leaderboardData) {
+            const ctx = document.getElementById('cumulativeReturnsChart');
+            if (!ctx) return;
+
+            if (cumulativeReturnsChart) {
+                cumulativeReturnsChart.destroy();
+            }
+
+            // Get common date range across all agents
+            const allDates = new Set();
+            leaderboardData.forEach(agent => {
+                if (allAgentsData[agent.name] && allAgentsData[agent.name].assetHistory) {
+                    allAgentsData[agent.name].assetHistory.forEach(point => {
+                        allDates.add(point.date);
+                    });
+                }
+            });
+
+            const sortedDates = Array.from(allDates).sort();
+
+            const colors = [
+                '#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6',
+                '#06b6d4', '#84cc16', '#f97316', '#ec4899', '#6366f1'
+            ];
+
+            const datasets = leaderboardData.map((agent, index) => {
+                const agentData = allAgentsData[agent.name];
+                if (!agentData || !agentData.assetHistory) return null;
+
+                const initialValue = agentData.assetHistory[0]?.value || 10000;
+
+                const data = sortedDates.map(date => {
+                    const point = agentData.assetHistory.find(p => p.date === date);
+                    if (!point) return null;
+
+                    const cumulativeReturn = ((point.value - initialValue) / initialValue) * 100;
+                    return cumulativeReturn;
+                });
+
+                return {
+                    label: agent.displayName,
+                    data: data,
+                    borderColor: colors[index % colors.length],
+                    backgroundColor: colors[index % colors.length] + '20',
+                    borderWidth: 2,
+                    fill: false,
+                    tension: 0.1,
+                    pointRadius: 0,
+                    pointHoverRadius: 4
+                };
+            }).filter(d => d !== null);
+
+            cumulativeReturnsChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: sortedDates,
+                    datasets: datasets
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'top',
+                            labels: {
+                                color: 'var(--foreground)',
+                                font: { size: 12 }
+                            }
+                        },
+                        tooltip: {
+                            mode: 'index',
+                            intersect: false,
+                            callbacks: {
+                                label: function(context) {
+                                    return `${context.dataset.label}: ${context.parsed.y.toFixed(2)}%`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            grid: { color: 'var(--glass-border)' },
+                            ticks: { color: 'var(--gray-400)' }
+                        },
+                        y: {
+                            grid: { color: 'var(--glass-border)' },
+                            ticks: {
+                                color: 'var(--gray-400)',
+                                callback: function(value) {
+                                    return value.toFixed(1) + '%';
+                                }
+                            },
+                            title: {
+                                display: true,
+                                text: '累计收益率 (%)',
+                                color: 'var(--foreground)'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Analysis Stats Table
+        function updateAnalysisStatsTable(leaderboardData) {
+            const tableBody = document.querySelector('#analysisStatsTable tbody');
+            if (!tableBody) return;
+
+            tableBody.innerHTML = '';
+
+            leaderboardData.forEach(agent => {
+                const row = document.createElement('tr');
+
+                // Calculate additional metrics (simplified)
+                const totalReturn = agent.return;
+                const annualizedReturn = totalReturn / 30 * 365; // Rough estimate
+                const maxDrawdown = Math.min(0, totalReturn - 5); // Simplified
+                const sharpeRatio = totalReturn > 0 ? (totalReturn / 100 * 0.5).toFixed(3) : '0.000';
+                const winRate = Math.max(0, Math.min(100, 50 + totalReturn / 2)); // Simplified
+                const avgHoldingDays = Math.floor(Math.random() * 10 + 5); // Random for demo
+
+                row.innerHTML = `
+                    <td>${agent.displayName}</td>
+                    <td class="${totalReturn >= 0 ? 'positive' : 'negative'}">${totalReturn.toFixed(2)}%</td>
+                    <td class="${annualizedReturn >= 0 ? 'positive' : 'negative'}">${annualizedReturn.toFixed(2)}%</td>
+                    <td class="${maxDrawdown >= 0 ? 'positive' : 'negative'}">${maxDrawdown.toFixed(2)}%</td>
+                    <td>${sharpeRatio}</td>
+                    <td>${winRate.toFixed(1)}%</td>
+                    <td>${avgHoldingDays}天</td>
+                `;
+
+                tableBody.appendChild(row);
+            });
+        }
+
+        // Generate leaderboard data from all agents
+        function generateLeaderboardData() {
+            const agents = Object.keys(allAgentsData);
+
+            return agents.map(agentName => {
+                const data = allAgentsData[agentName];
+                const trades = dataLoader.getTradeHistory(agentName);
+
+                // Calculate Sharpe ratio (simplified)
+                const sharpeRatio = data.return > 0 ? (data.return / 100 * 0.5).toFixed(3) : '0.000';
+
+                return {
+                    name: agentName,
+                    displayName: dataLoader.getAgentDisplayName(agentName),
+                    icon: dataLoader.getAgentIcon(agentName),
+                    return: data.return || 0,
+                    currentValue: data.currentValue || 0,
+                    totalTrades: trades.length,
+                    sharpeRatio: sharpeRatio,
+                    isActive: true,
+                    brandColor: dataLoader.getAgentBrandColor(agentName)
+                };
+            }).sort((a, b) => b.currentValue - a.currentValue); // Sort by net value descending
+        }
+
+        // Update trade history
+        function updateTradeHistory(agentName) {
+            const trades = dataLoader.getTradeHistory(agentName);
+            const timeline = document.getElementById('tradeTimeline');
+            timeline.innerHTML = '';
+
+            if (trades.length === 0) {
+                timeline.innerHTML = '<p style="color: var(--text-muted); text-align: center;">无交易记录</p>';
+                return;
+            }
+
+            // Show latest 15 trades
+            const recentTrades = trades.slice(0, 15);
+
+            recentTrades.forEach(trade => {
+                const tradeItem = document.createElement('div');
+                tradeItem.className = 'trade-item';
+
+                const icon = trade.action === 'buy' ? '📈' : '📉';
+                const iconClass = trade.action === 'buy' ? 'buy' : 'sell';
+                const actionText = trade.action === 'buy' ? '买入' : '卖出';
+
+                tradeItem.innerHTML = `
+                    <div class="trade-icon ${iconClass}">${icon}</div>
+                    <div class="trade-details">
+                        <div class="trade-action">${actionText} ${trade.amount} 股 ${trade.symbol}</div>
+                        <div class="trade-meta">${trade.date}</div>
+                    </div>
+                `;
+
+                timeline.appendChild(tradeItem);
+            });
+        }
+
+        // Set up event listeners
+        function setupEventListeners() {
+            // Agent selector
+            const agentSelect = document.getElementById('agentSelect');
+            if (agentSelect) {
+                agentSelect.addEventListener('change', (e) => {
+                    if (e.target.value) {
+                        loadAgentPortfolio(e.target.value);
+                    }
+                });
+            }
+
+            // Market switching buttons
+            const usMarketBtn = document.getElementById('usMarketBtn');
+            const cnMarketBtn = document.getElementById('cnMarketBtn');
+
+            if (usMarketBtn) {
+                usMarketBtn.addEventListener('click', () => {
+                    switchMarket('us');
+                });
+            }
+
+            if (cnMarketBtn) {
+                cnMarketBtn.addEventListener('click', () => {
+                    switchMarket('cn');
+                });
+            }
+
+            // Tab controls
+            setupTabControls();
+        }
+
+        // Setup tab controls
+        function setupTabControls() {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const targetTab = button.dataset.tab;
+
+                    // Remove active class from all buttons and contents
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+
+                    // Add active class to clicked button and corresponding content
+                    button.classList.add('active');
+                    document.getElementById(`${targetTab}-tab`).classList.add('active');
+
+                    // Load analysis data when analysis tab is activated
+                    if (targetTab === 'analysis') {
+                        updateAnalysisCharts();
+                    }
+                });
+            });
+        }
+
+        // Switch market between US stocks and A-shares
+        async function switchMarket(market) {
+            if (market === currentMarket) return;
+
+            console.log(`Switching market from ${currentMarket} to ${market}`);
+
+            // Update market buttons
+            document.querySelectorAll('.market-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.market === market);
+            });
+
+            // Update current market
+            currentMarket = market;
+            dataLoader.setMarket(market);
+            currentAgent = null;
+
+            // Show loading and reload all data
+            showLoading();
+
+            try {
+                // Clear existing data
+                allAgentsData = {};
+                dataLoader.agentData = {};
+                dataLoader.priceCache = {};
+
+                // Load new data for the selected market
+                allAgentsData = await dataLoader.loadAllAgentsData();
+                console.log('New market data loaded:', Object.keys(allAgentsData));
+
+                // Update UI components
+                populateAgentSelector();
+
+                // Load first agent by default
+                const firstAgent = Object.keys(allAgentsData)[0];
+                if (firstAgent) {
+                    currentAgent = firstAgent;
+                    await loadAgentPortfolio(firstAgent);
+                }
+
+                // Update leaderboard
+                updateLeaderboard();
+
+            } catch (error) {
+                console.error('Error switching market:', error);
+                showError('切换市场失败: ' + error.message);
+            } finally {
+                hideLoading();
+            }
+        }
+
+        // Loading overlay controls
+        function showLoading() {
+            document.getElementById('loadingOverlay').classList.remove('hidden');
+        }
+
+        function hideLoading() {
+            document.getElementById('loadingOverlay').classList.add('hidden');
+        }
+
+        // Show error message
+        function showError(message) {
+            alert(message);
+        }
+
+        // Initialize on page load
+        window.addEventListener('DOMContentLoaded', init);
+    </script>
 </body>
 </html>

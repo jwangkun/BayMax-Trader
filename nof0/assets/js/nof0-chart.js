@@ -6,7 +6,7 @@ class Nof0ChartManager {
         this.currentValueMode = 'dollar';
         this.agentsData = {};
         this.iconCache = {};
-        this.selectedAgent = null; // 当前选中的代理
+        this.selectedAgent = null; // 当前选中的Agent
         this.colors = {
             'claude-3.7-sonnet': '#ff6b35',
             'deepseek-chat-v3.1': '#4d6bfe',
@@ -309,7 +309,7 @@ class Nof0ChartManager {
                 borderWidth: isSelected ? 3 : 1, // 选中时线条更粗
                 pointRadius: isSelected ? 2 : 0, // 选中时显示点
                 pointHoverRadius: isSelected ? 8 : 6,
-                agentName: agentName // 添加代理名称用于识别
+                agentName: agentName // 添加Agent名称用于识别
             });
         });
 
@@ -406,7 +406,7 @@ class Nof0ChartManager {
         
         legendContainer.appendChild(allItem);
 
-        // 添加各个代理
+        // 添加各个Agent
         Object.keys(this.agentsData).forEach(agentName => {
             const legendItem = document.createElement('div');
             const isSelected = this.selectedAgent === agentName;
@@ -760,13 +760,13 @@ class Nof0ChartManager {
         }
     }
 
-    // 切换代理选择状态
+    // 切换Agent选择状态
     toggleAgentSelection(agentName) {
         if (this.selectedAgent === agentName) {
-            // 如果当前代理已选中，则取消选择
+            // 如果当前Agent已选中，则取消选择
             this.selectedAgent = null;
         } else {
-            // 选择新的代理
+            // 选择新的Agent
             this.selectedAgent = agentName;
         }
         
