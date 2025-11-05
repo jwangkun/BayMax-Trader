@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>排行榜 - BayMax Trade Agent</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/nof0-styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="header-brand">
+                <h1>BayMax Trade Agent</h1>
+            </div>
+            <nav class="header-nav">
+                <a href="index.html" class="nav-link">实盘</a>
+                <a href="portfolio.html" class="nav-link active">排行榜</a>
+                <a href="models.html" class="nav-link">模型</a>
+            </nav>
+            <div class="market-selector">
+                <button id="usMarketBtn" class="market-btn active" data-market="us">🇺🇸 US Market</button>
+                <button id="cnMarketBtn" class="market-btn" data-market="cn">🇨🇳 A-Shares</button>
+            </div>
+            <div class="header-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="切换主题">
+                    <svg class="theme-icon light-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <circle cx="12" cy="12" r="5"/>
+                        <line x1="12" y1="1" x2="12" y2="3"/>
+                        <line x1="12" y1="21" x2="12" y2="23"/>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                        <line x1="1" y1="12" x2="3" y2="12"/>
+                        <line x1="21" y1="12" x2="23" y2="12"/>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    </svg>
+                    <svg class="theme-icon dark-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                </button>
+                <a href="https://github.com/HKUDS/BayMax Trade Agent" target="_blank" rel="noopener noreferrer" class="github-link" aria-label="GitHub">
+                    <svg class="github-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.30.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <header class="page-header">
+                <h2>BayMax代理投资组合明细</h2>
+                <p class="subtitle">详细分析每个AI代理的持仓和表现</p>
+            </header>
+
+        <section class="leaderboard-section">
+            <div class="leaderboard-tabs">
+                <button class="tab-button active" data-tab="leaderboard">排行榜</button>
+                <button class="tab-button" data-tab="analysis">高级分析</button>
+            </div>
+            
+            <div class="tab-content active" id="leaderboard-tab">
+                <div class="overview-stats-section">
+                    <div class="overview-stats-grid">
+                        <div class="overview-stat-card best-model">
+                            <div class="stat-header">
+                                <h4>最佳模型</h4>
+                                <div class="stat-icon best-icon">👑</div>
+                            </div>
+                            <div class="stat-content" id="bestModelOverview">
+                                <!-- 由JavaScript填充 -->
+                            </div>
+                        </div>
+                        
+                        <div class="overview-stat-card total-equity">
+                            <div class="stat-header">
+                                <h4>总权益</h4>
+                                <div class="stat-icon total-icon">💰</div>
+                            </div>
+                            <div class="stat-content" id="totalEquityOverview">
+                                <!-- 由JavaScript填充 -->
+                            </div>
+                        </div>
+                        
+                        <div class="overview-stat-card worst-model">
+                            <div class="stat-header">
+                                <h4>最差模型</h4>
+                                <div class="stat-icon worst-icon">📉</div>
+                            </div>
+                            <div class="stat-content" id="worstModelOverview">
+                                <!-- 由JavaScript填充 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="leaderboard-table-container">
+                    <table class="nof0-leaderboard-table">
+                        <thead>
+                            <tr>
+                                <th class="rank-header">#</th>
+                                <th class="model-header">模型</th>
+                                <th class="value-header">净值 ▼</th>
+                                <th class="return-header">收益率</th>
+                                <th class="trades-header">交易数</th>
+                                <th class="sharpe-header">夏普</th>
+                            </tr>
+                        </thead>
+                        <tbody id="nof0LeaderboardBody">
+                            <!-- 由JavaScript填充 -->
+                        </tbody>
+                    </table>
+                </div>
+
+                
+
+                <div class="account-info-section">
+                    <h4>账户信息</h4>
+                    <div class="account-chart-container">
+                        <canvas id="accountInfoChart"></canvas>
+                    </div>
+                    <div class="account-summary-stats">
+                        <div class="summary-stat-grid">
+                            <div class="summary-stat-item">
+                                <div class="summary-stat-label">总投资组合数</div>
+                                <div class="summary-stat-value" id="totalPortfolios">-</div>
+                            </div>
+                            <div class="summary-stat-item">
+                                <div class="summary-stat-label">平均账户价值</div>
+                                <div class="summary-stat-value" id="avgAccountValue">-</div>
+                            </div>
+                            <div class="summary-stat-item">
+                                <div class="summary-stat-label">最高账户价值</div>
+                                <div class="summary-stat-value" id="maxAccountValue">-</div>
+                            </div>
+                            <div class="summary-stat-item">
+                                <div class="summary-stat-label">最低账户价值</div>
+                                <div class="summary-stat-value" id="minAccountValue">-</div>
+                            </div>
+                            <div class="summary-stat-item">
+                                <div class="summary-stat-label">价值标准差</div>
+                                <div class="summary-stat-value" id="valueStdDev">-</div>
+                            </div>
+                            <div class="summary-stat-item">
+                                <div class="summary-stat-label">活跃投资组合</div>
+                                <div class="summary-stat-value" id="activePortfolios">-</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="analysis-tab">
+                <div class="analysis-content">
+                    <div class="analysis-grid">
+                        <div class="analysis-card">
+                            <h4>收益率对比</h4>
+                            <div class="chart-container">
+                                <canvas id="returnsComparisonChart"></canvas>
+                            </div>
+                        </div>
+                        
+                        <div class="analysis-card">
+                            <h4>资产价值演变</h4>
+                            <div class="chart-container">
+                                <canvas id="assetEvolutionChart"></canvas>
+                            </div>
+                        </div>
+                        
+                        <div class="analysis-card">
+                            <h4>风险收益散点图</h4>
+                            <div class="chart-container">
+                                <canvas id="riskReturnChart"></canvas>
+                            </div>
+                        </div>
+                        
+                        <div class="analysis-card">
+                            <h4>交易活跃度</h4>
+                            <div class="chart-container">
+                                <canvas id="tradingActivityChart"></canvas>
+                            </div>
+                        </div>
+                        
+                        <div class="analysis-card full-width">
+                            <h4>累计收益率趋势</h4>
+                            <div class="chart-container">
+                                <canvas id="cumulativeReturnsChart"></canvas>
+                            </div>
+                        </div>
+                        
+                        <div class="analysis-card full-width">
+                            <h4>模型表现统计</h4>
+                            <div class="stats-table-container">
+                                <table class="analysis-stats-table" id="analysisStatsTable">
+                                    <thead>
+                                        <tr>
+                                            <th>模型</th>
+                                            <th>总收益率</th>
+                                            <th>年化收益率</th>
+                                            <th>最大回撤</th>
+                                            <th>夏普比率</th>
+                                            <th>胜率</th>
+                                            <th>平均持仓天数</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- 由JavaScript填充 -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="agent-selector-section">
+            <label for="agentSelect">选择代理：</label>
+            <select id="agentSelect" class="agent-select"></select>
+        </section>
+
+        <section class="portfolio-grid">
+            <div class="portfolio-card">
+                <h3>业绩指标</h3>
+                <div class="metrics-list">
+                    <div class="metric-item">
+                        <span class="metric-label">总资产价值</span>
+                        <span class="metric-value" id="totalAsset">$0.00</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-label">总收益率</span>
+                        <span class="metric-value" id="totalReturn">0.00%</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-label">现金头寸</span>
+                        <span class="metric-value" id="cashPosition">$0.00</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-label">交易总数</span>
+                        <span class="metric-value" id="totalTrades">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-card">
+                <h3>资产配置</h3>
+                <div class="chart-container-small">
+                    <canvas id="allocationChart"></canvas>
+                </div>
+                <div class="allocation-legend" id="allocationLegend">
+                    <!-- 由JavaScript填充 -->
+                </div>
+            </div>
+        </section>
+
+        <section class="holdings-section">
+            <h3>当前持仓</h3>
+            <div class="holdings-scroll-wrapper">
+                <div class="holdings-table-container">
+                    <table class="holdings-table">
+                        <thead>
+                            <tr>
+                                <th>股票代码</th>
+                                <th>股数</th>
+                                <th>当前价格</th>
+                                <th>市值</th>
+                                <th>权重</th>
+                            </tr>
+                        </thead>
+                        <tbody id="holdingsTableBody">
+                            <!-- 由JavaScript填充 -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="trade-history-section">
+            <h3>最近交易活动</h3>
+            <div class="trade-timeline" id="tradeTimeline">
+                <!-- 由JavaScript填充 -->
+            </div>
+        </section>
+
+        <div class="loading-overlay" id="loadingOverlay">
+            <div class="spinner"></div>
+            <p>正在加载投资组合数据...</p>
+        </div>
+
+        <button class="scroll-to-top" id="scrollToTop" aria-label="返回顶部">
+            ↑
+        </button>
+        
+        </div>
+    </main>
+
+    <script src="assets/js/data-loader.js"></script>
+    <script src="assets/js/portfolio.js"></script>
+    <script src="assets/js/analysis-charts.js"></script>
+    <script src="assets/js/theme.js"></script>
+</body>
+</html>
